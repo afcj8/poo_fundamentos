@@ -1,6 +1,6 @@
 # 1. Princípios da Orientação a Objetos
 
-O alicerce da Programação Orientada a Objetos é baseado em quatro princípios, os quais devem ser pensados e refletidos nos processos do desenvolvimento de um sistema: Abstração, Encapsulamento, Hierarquia e Modularização.
+O alicerce da Programação Orientada a Objetos é baseado em quatro princípios, os quais devem ser pensados e refletidos nos processos do desenvolvimento de um sistema: Abstração, Encapsulamento, Herança e Modularização.
 
 ## 1.1. Abstração
 
@@ -15,3 +15,18 @@ Encapsulamento é o princípio de isolar partes do software, organizando-o de ma
 **Ex.:** quando um cliente compra um micro-ondas e deseja utilizá-lo, basta acionar os botões para programar um tempo (inserindo informações aos seus atributos) e pressionar o botão para iniciar o aquecimento (invocando um comportamento). Esses botões irão acionar os circuitos elétricos e as placas internas, sem que o cliente tenha a necessidade de conhecimento do que ocorre dentro da “CÁPSULA” do micro-ondas.
 
 Da mesma forma, as classes devem esconder sua implementação interna, permitindo que outras classes interajam apenas com suas funcionalidades, sem a necessidade de conhecer os detalhes de sua lógica interna. Isso garante que a interação ocorra apenas através das interfaces disponibilizadas, similar aos botões do micro-ondas.
+
+## 1.3. Herança
+
+Na programação orientada a objetos, a herança é um conceito que reflete relações existentes no mundo real. Por exemplo, um filho pode herdar a cor dos olhos de seu pai, que, por sua vez, herdou essa característica de seu avô.
+
+No contexto da programação, a herança é o mecanismo pelo qual uma classe (subclasse) pode estender outra classe (superclasse), recebendo seus comportamentos (métodos) e variáveis (atributos). Por exemplo, a classe "Mamífero" pode ser considerada a superclasse da classe "Humano"; assim, um humano é um mamífero e herda os atributos e métodos da classe "Mamífero".
+
+A herança é um dos mecanismos fundamentais nas linguagens que suportam o paradigma da orientação a objetos. Esse recurso permite a criação de novas classes a partir de classes já existentes, facilitando a reutilização de atributos e métodos. Dessa forma, é possível derivar uma nova classe mais especializada a partir de uma classe genérica.
+
+A aplicação da herança envolve basicamente dois elementos: a superclasse (classe pai) e a subclasse (classe filha). A figura 1 a seguir ilustra essa relação de herança.
+
+<div align="center">
+    <img src="../imgs/heranca.png" width="50%"/>
+    <p>Figura 1: Herança entre classes.</p>
+</div>
