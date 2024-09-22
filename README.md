@@ -1,2 +1,3 @@
-# poo_fundamentos
-Este repositório é destinado ao aprendizado dos fundamentos da programação orientada a objetos, utilizando a linguagem de programação Java.
+# Introdução à Linguagem Java
+
+A primeira versão da linguagem Java surgiu em 1995, criada por um time de desenvolvedores da empresa Sun Microsystem, liderado por James Gosling. A ideia inicial era desenvolver uma linguagem para controlar pequenos dispositivos, como televisores, videocassetes e aparelhos de TV a cabo. A ideia não deu certo, mas como advento da internet, a plataforma foi adotada, se expandiu e evoluiu, e atualmente é uma referência no mercado de desenvolvimento de sistemas.
