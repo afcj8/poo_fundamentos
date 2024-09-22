@@ -30,3 +30,9 @@ A aplicação da herança envolve basicamente dois elementos: a superclasse (cla
     <img src="../imgs/heranca.png" width="50%"/>
     <p>Figura 1: Herança entre classes.</p>
 </div>
+
+## 1.4. Modularização
+
+A modularização é o processo de dividir um sistema em partes bem definidas, que podem ser construídas e examinadas separadamente, permitindo que interajam entre si. Assim como no mundo real, a programação orientada a objetos possibilita a criação de comportamentos modulares, que podem ser reutilizados em diversos sistemas distintos.
+
+Por exemplo, a classe "Aluno", se desenvolvida com base nos princípios da modularização, pode ser utilizada em diferentes contextos, como em um sistema de cadastro de alunos, em um sistema financeiro da instituição, para lançamento de notas ou consulta ao boletim, entre outros.
