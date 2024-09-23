@@ -43,10 +43,42 @@ Além desses, o tipo `char` é utilizado para armazenar caracteres individuais, 
 
 ## 2.1. Atribuindo Valores às Variáveis
 
-Depois de declarar uma variável, pode-se atribuir um valor a ela com o operador de atribuição, que é definido pelo sinal de igual `=`. Por exemplo:
+Após declarar uma variável, é possível atribuir um valor a ela utilizando o operador de atribuição, representado pelo sinal de igual `=`. Por exemplo:
+
 ```
 int idade = 10;
 double preco = 25.0;
-char sexo = ‘M’;
+char sexo = 'M';
 boolean maiorIdade = false;
 ```
+
+Em algumas situações, pode ser necessário converter um tipo de dado para outro. A Figura 2.1 abaixo apresenta as conversões possíveis entre os tipos de dados.
+
+<div align="center">
+    <img src="../imgs/conversoes_tipos.png" width="50%"/>
+    <p>Figura 2.1: Conversões de tipos.</p>
+</div>
+
+As setas sólidas indicam conversões onde não há perda de informação, pois a mudança ocorre de um tipo menor para um maior. Já as setas pontilhadas indicam conversões que podem resultar em perda de informações. Por exemplo, um número inteiro grande pode exceder a capacidade de armazenamento de um `float`.
+
+O código a seguir demonstra algumas conversões que podem ser realizadas automaticamente, chamadas de conversões implícitas:
+
+```
+public class Conversoes {
+    public static void main(String[] args) {
+        int x = 10;
+        double d = x; // Conversão implícita
+        long l = x; // Conversão implícita
+        float f = x; // Conversão implícita
+    }
+}
+```
+
+No entanto, em certos casos, não é possível realizar conversões automáticas. Por exemplo, converter um valor do tipo `double` para `int` não ocorre de forma automática, pois há risco de perda de informações. Para realizar esse tipo de conversão, chamada de "casting", é necessário indicar explicitamente o tipo de destino entre parênteses:
+
+```
+double x = 10.0;
+int y = (int) x;
+```
+
+No exemplo acima, o valor de `x`, do tipo `double`, é convertido para `int`, e a variável `y` recebe apenas a parte inteira do número, resultando na perda da parte fracionária.
