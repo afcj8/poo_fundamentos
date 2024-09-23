@@ -29,3 +29,15 @@ Parênteses podem ser utilizados para agrupar e priorizar operações, tal como 
 ```
 
 Nesse caso, a soma `x + y` é realizada primeiro.
+
+## 3.2. Operadores de Atribuição
+
+
+Aqui está uma versão aprimorada e mais fluida do seu texto:
+
+Como já mencionado, a atribuição de valores a uma variável é feita utilizando o símbolo de igual `=`. A atribuição ocorre sempre após o processamento das expressões do lado direito. Por exemplo:
+
+```
+int x = 10;
+x = x + 15;
+```
