@@ -114,3 +114,61 @@ boolean maioridade = idade > 18;
 ```
 
 A variável `idade` é inicializada com o valor 10. Em seguida, a variável booleana `maioridade` recebe o resultado da expressão `idade > 18`, que verifica se o valor de `idade` é maior que 18. Nesse caso, o resultado será `false`.
+
+## 3.5. Operadores Lógicos
+
+Operadores lógicos são utilizados para formar expressões de comparação mais complexas, envolvendo mais de um termo. Essas expressões retornam valores booleanos (verdadeiro ou falso). Os operadores lógicos mais comuns são: AND, OR, XOR e NOT.
+
+### 3.5.1. Operação AND (&&)
+
+O operador lógico AND (e) é representado por `&&`. Quando duas expressões são combinadas com `&&`, o resultado final será `true` somente se ambas as expressões forem verdadeiras. Exemplo:
+
+```
+boolean precisaVotar = idade > 18 && idade < 70;
+```
+
+No exemplo acima, a primeira expressão verifica se `idade` é maior que 18, e a segunda, se `idade` é menor que 70. A variável `precisaVotar` receberá `true` somente se ambas as condições forem verdadeiras; caso contrário, será `false`. A tabela a seguir ilustra a operação AND:
+
+| a | b | a and b |
+| - | - | ------- |
+| v | v | v       |
+| v | f | f       |
+| f | v | f       |
+| f | f | f       |
+
+### 3.5.2. Operação OR (||)
+
+O operador lógico OR (ou) é representado por `||`. O resultado será `true` se pelo menos uma das expressões for verdadeira. Exemplo:
+
+```
+boolean teste = x < 10 || x > 50;
+```
+
+Nesse caso, a variável `teste` será `true` se qualquer uma das condições for verdadeira; será `false` somente se ambas forem falsas. A tabela a seguir mostra o comportamento da operação OR:
+
+| a | b | a or b  |
+| - | - | ------- |
+| v | v | v       |
+| v | f | v       |
+| f | v | v       |
+| f | f | f       |
+
+### 3.5.3. Operação XOR (^)
+
+O operador XOR (ou exclusivo) é representado pelo símbolo `^`. O resultado será `true` se uma das expressões for verdadeira e a outra for falsa. Se ambas forem verdadeiras ou ambas forem falsas, o resultado será `false`. A tabela a seguir ilustra a operação XOR:
+
+| a | b | a xor b  |
+| - | - | -------- |
+| v | v | f        |
+| v | f | v        |
+| f | v | v        |
+| f | f | f        |
+
+### 3.5.4. Operação NOT (!)
+
+O operador NOT (não) é representado pelo símbolo `!` e inverte o valor da expressão booleana. Por exemplo, se `idade > 18` retornar true, a expressão `!(idade > 18)` retornará `false`. A tabela a seguir mostra o comportamento da operação NOT:
+
+| a | not a   |
+| - | ------- |
+| v | f       |
+| f | v       |
