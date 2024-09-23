@@ -72,3 +72,9 @@ Os outros operadores aritméticos básicos — multiplicação, divisão e subtr
 | x /= y	    | x = x / y   |
 
 Esses operadores tornam o código mais conciso e legível.
+
+## 3.3. Operadores de Incremento e Decremento
+
+Para aumentar ou diminuir o valor de uma variável em uma unidade, podem ser utilizados os operadores de incremento `++` e decremento `--`.
+
+Por exemplo, para adicionar 1 à variável `x`, pode-se utilizar `x++;`, que é equivalente à expressão `x = x + 1;`. Da mesma forma, para subtrair `1` de `x`, pode-se escrever `x--;`, equivalente `a x = x - 1;`.
