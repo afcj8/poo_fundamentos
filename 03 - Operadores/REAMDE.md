@@ -41,3 +41,23 @@ Como já mencionado, a atribuição de valores a uma variável é feita utilizan
 int x = 10;
 x = x + 15;
 ```
+
+Qual é o valor final de `x`? Primeiro, a variável `x` é inicializada com o valor `10`. Em seguida, a expressão `x + 15` é processada, retornando o valor `25`. Após isso, esse valor é atribuído de volta à variável `x`.
+
+
+Aqui está uma versão aprimorada e mais fluida do seu texto:
+
+Como já mencionado, a atribuição de valores a uma variável é feita utilizando o símbolo de igual =. A atribuição ocorre sempre após o processamento das expressões do lado direito. Por exemplo:
+
+java
+Copiar código
+int x = 10;
+x = x + 15;
+Qual é o valor final de x? Primeiro, a variável x é inicializada com o valor 10. Em seguida, a expressão x + 15 é processada, retornando o valor 25. Após isso, esse valor é atribuído de volta à variável x.
+
+Para simplificar essa operação, que é bastante comum na programação, existem operadores específicos de atribuição. Assim, o código pode ser reescrito da seguinte forma:
+
+```
+int x = 10;
+x += 15;
+```
