@@ -61,3 +61,14 @@ Para simplificar essa operação, que é bastante comum na programação, existe
 int x = 10;
 x += 15;
 ```
+
+Os outros operadores aritméticos básicos — multiplicação, divisão e subtração — também possuem seus respectivos operadores de atribuição. A tabela abaixo apresenta os operadores de atribuição e suas expressões equivalentes:
+
+| Expresão      | Significado |
+| ------------- | ----------- |
+| x += y        | x = x + y   |
+| x -= y        | x = x - y   |
+| x *= y        | x = x * y   |
+| x /= y	    | x = x / y   |
+
+Esses operadores tornam o código mais conciso e legível.
