@@ -152,3 +152,14 @@ Nesse caso, a variável `teste` será `true` se qualquer uma das condições for
 | v | f | v       |
 | f | v | v       |
 | f | f | f       |
+
+### 3.5.3. Operação XOR (^)
+
+O operador XOR (ou exclusivo) é representado pelo símbolo `^`. O resultado será `true` se uma das expressões for verdadeira e a outra for falsa. Se ambas forem verdadeiras ou ambas forem falsas, o resultado será `false`. A tabela a seguir ilustra a operação XOR:
+
+| a | b | a xor b  |
+| - | - | -------- |
+| v | v | f        |
+| v | f | v        |
+| f | v | v        |
+| f | f | f        |
