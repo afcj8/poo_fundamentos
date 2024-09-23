@@ -40,3 +40,13 @@ Para números de ponto flutuante, que contêm parte fracionária (números decim
 O tipo `double` oferece maior precisão em comparação ao `float`, sendo o mais utilizado em situações que requerem maior exatidão.
 
 Além desses, o tipo `char` é utilizado para armazenar caracteres individuais, como letras, números ou sinais de pontuação. Já o tipo `boolean` armazena valores lógicos, podendo ser true (verdadeiro) ou false (falso). No Java, não é possível converter números inteiros em valores booleanos.
+
+## 2.1. Atribuindo Valores às Variáveis
+
+Depois de declarar uma variável, pode-se atribuir um valor a ela com o operador de atribuição, que é definido pelo sinal de igual `=`. Por exemplo:
+```
+int idade = 10;
+double preco = 25.0;
+char sexo = ‘M’;
+boolean maiorIdade = false;
+```
