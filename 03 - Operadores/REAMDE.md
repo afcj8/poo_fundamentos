@@ -106,3 +106,11 @@ Para realizar comparações entre variáveis, valores ou outros tipos de informa
 | Menor       |    <     | 5 < 2 --> False   |
 | Menor-igual |    <=    | 10 <= 3 --> False |
 
+Por exemplo, no código a seguir:
+
+```
+int idade = 10;
+boolean maioridade = idade > 18;
+```
+
+A variável `idade` é inicializada com o valor 10. Em seguida, a variável booleana `maioridade` recebe o resultado da expressão `idade > 18`, que verifica se o valor de `idade` é maior que 18. Nesse caso, o resultado será `false`.
