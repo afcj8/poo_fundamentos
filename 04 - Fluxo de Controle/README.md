@@ -46,4 +46,4 @@ if (x > 10) {
 
 Nesse exemplo, primeiro é verificado se `x` é maior que 10. Se não for, a segunda condição verifica se `x` é igual a 10. Caso nenhuma das condições anteriores seja verdadeira, o bloco do `else` será executado, imprimindo que "X é menor que 10".
 
-**Observação:** Um else sempre se refere ao if mais próximo que ainda não tenha um else correspondente.
+**Observação:** Um `else` sempre se refere ao `if` mais próximo que ainda não tenha um `else` correspondente.
