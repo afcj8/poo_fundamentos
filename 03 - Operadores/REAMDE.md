@@ -118,3 +118,20 @@ A variável `idade` é inicializada com o valor 10. Em seguida, a variável bool
 ## 3.5. Operadores Lógicos
 
 Operadores lógicos são utilizados para formar expressões de comparação mais complexas, envolvendo mais de um termo. Essas expressões retornam valores booleanos (verdadeiro ou falso). Os operadores lógicos mais comuns são: AND, OR, XOR e NOT.
+
+### 3.5.1. Operação AND (&&)
+
+O operador lógico AND (e) é representado por `&&`. Quando duas expressões são combinadas com `&&`, o resultado final será `true` somente se ambas as expressões forem verdadeiras. Exemplo:
+
+```
+boolean precisaVotar = idade > 18 && idade < 70;
+```
+
+No exemplo acima, a primeira expressão verifica se `idade` é maior que 18, e a segunda, se `idade` é menor que 70. A variável `precisaVotar` receberá `true` somente se ambas as condições forem verdadeiras; caso contrário, será `false`. A tabela a seguir ilustra a operação AND:
+
+| a | b | a and b |
+| - | - | ------- |
+| v | v | v       |
+| v | f | f       |
+| f | v | f       |
+| f | f | f       |
