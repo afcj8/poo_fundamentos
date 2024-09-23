@@ -135,3 +135,20 @@ No exemplo acima, a primeira expressão verifica se `idade` é maior que 18, e a
 | v | f | f       |
 | f | v | f       |
 | f | f | f       |
+
+### 3.5.2. Operação OR (||)
+
+O operador lógico OR (ou) é representado por `||`. O resultado será `true` se pelo menos uma das expressões for verdadeira. Exemplo:
+
+```
+boolean teste = x < 10 || x > 50;
+```
+
+Nesse caso, a variável `teste` será `true` se qualquer uma das condições for verdadeira; será `false` somente se ambas forem falsas. A tabela a seguir mostra o comportamento da operação OR:
+
+| a | b | a or b  |
+| - | - | ------- |
+| v | v | v       |
+| v | f | v       |
+| f | v | v       |
+| f | f | f       |
