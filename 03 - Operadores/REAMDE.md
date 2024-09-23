@@ -92,3 +92,25 @@ public class Operadores {
 ```
 
 Ao executar esse código, os valores impressos serão 11 e 10, respectivamente. Primeiro, a variável `a` é incrementada em 1, resultando em 11. Em seguida, ela é decrementada em 1, retornando ao valor original de 10.
+
+## 3.4. Operadores Relacionais
+
+Para realizar comparações entre variáveis, valores ou outros tipos de informações, são utilizados operadores que formam expressões lógicas, as quais retornam um valor booleano: verdadeiro (`true`) ou falso (`false`). A tabela a seguir apresenta os operadores de comparação disponíveis no Java:
+
+| Operação    | Símbolo  | Exemplo           |
+| ----------- | -------- | ----------------- |
+| Igual       |    ==    | 5 == 3 --> False  |
+| Diferente   |    !=    | 8 != 3 --> True   |
+| Maior       |    >     | 10 > 3 --> True   |
+| Maior-igual |    >=    | 5 >= 5 --> True   |
+| Menor       |    <     | 5 < 2 --> False   |
+| Menor-igual |    <=    | 10 <= 3 --> False |
+
+Por exemplo, no código a seguir:
+
+```
+int idade = 10;
+boolean maioridade = idade > 18;
+```
+
+A variável `idade` é inicializada com o valor 10. Em seguida, a variável booleana `maioridade` recebe o resultado da expressão `idade > 18`, que verifica se o valor de `idade` é maior que 18. Nesse caso, o resultado será `false`.
