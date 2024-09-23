@@ -163,3 +163,12 @@ O operador XOR (ou exclusivo) é representado pelo símbolo `^`. O resultado ser
 | v | f | v        |
 | f | v | v        |
 | f | f | f        |
+
+### 3.5.4. Operação NOT (!)
+
+O operador NOT (não) é representado pelo símbolo `!` e inverte o valor da expressão booleana. Por exemplo, se `idade > 18` retornar true, a expressão `!(idade > 18)` retornará `false`. A tabela a seguir mostra o comportamento da operação NOT:
+
+| a | not a   |
+| - | ------- |
+| v | f       |
+| f | v       |
