@@ -13,3 +13,19 @@ Os operadores aritméticos são utilizados para realizar operações básicas co
 | Divisão       |     /    | 10 / 3 = 3.333... |
 | Multiplicação |     *    | 5 * 3 = 15        |
 | Resto da div. |     %    | 10 % 3 = 1        |
+
+No Java, a divisão entre números inteiros resulta em um valor inteiro, onde a parte fracionária é descartada sem arredondamento. Por exemplo, o resultado de `7 / 2` é `3`. O operador de módulo `%` retorna o resto da divisão, logo, `7 % 2` resulta em `1`.
+
+Assim como em expressões matemáticas, Java permite a realização de múltiplas operações aritméticas em uma única expressão. As regras de precedência de operadores matemáticos também se aplicam no Java:
+
+- Operações de multiplicação, divisão e módulo são realizadas primeiro, pois possuem o mesmo nível de precedência. Quando há mais de uma dessas operações na expressão, elas são resolvidas da esquerda para a direita.
+
+- Em seguida, as operações de adição e subtração são aplicadas, também com o mesmo nível de precedência.
+
+Parênteses podem ser utilizados para agrupar e priorizar operações, tal como nas expressões algébricas. Por exemplo, para calcular a soma de `x` e `y` antes de multiplicar por `z`, utiliza-se a seguinte expressão:
+
+```
+(x + y) * z
+```
+
+Nesse caso, a soma `x + y` é realizada primeiro.
