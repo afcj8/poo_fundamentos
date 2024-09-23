@@ -14,3 +14,20 @@ As chaves `{}` delimitam o bloco de código pertencente ao `if`. A condição é
     <img src="../imgs/comando_if.png" width="50%" style="max-height: 80vh;"/>
     <p>Figura 4.1: Fluxograma (comando if).</p>
 </div>
+
+Também é possível adicionar o comando `else` (opcional), para tratar o caso em que a condição do `if` seja falsa:
+
+```
+if (condição) {
+    // instruções se a condição for verdadeira
+} else {
+    // instruções se a condição for falsa
+}
+```
+
+Quando a condição no `if` é falsa, o bloco de código do `else` será executado. Isso permite que o programa tenha um fluxo alternativo de execução, conforme ilustrado no fluxograma de um comando `if-else`.
+
+<div align="center">
+    <img src="../imgs/comando_if_else.png" width="50%" style="max-height: 80vh;"/>
+    <p>Figura 4.2: Fluxograma (comando if-else).</p>
+</div>
