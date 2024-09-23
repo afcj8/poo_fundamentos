@@ -114,3 +114,7 @@ boolean maioridade = idade > 18;
 ```
 
 A variável `idade` é inicializada com o valor 10. Em seguida, a variável booleana `maioridade` recebe o resultado da expressão `idade > 18`, que verifica se o valor de `idade` é maior que 18. Nesse caso, o resultado será `false`.
+
+## 3.5. Operadores Lógicos
+
+Operadores lógicos são utilizados para formar expressões de comparação mais complexas, envolvendo mais de um termo. Essas expressões retornam valores booleanos (verdadeiro ou falso). Os operadores lógicos mais comuns são: AND, OR, XOR e NOT.
