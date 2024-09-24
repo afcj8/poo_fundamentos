@@ -80,3 +80,27 @@ public class DoWhile {
 ```
 
 Nesse exemplo, o programa realiza a leitura de dois números e calcula sua soma. Após a operação, é verificado se o usuário deseja continuar, com base na resposta fornecida. Caso a resposta seja "S", o loop é repetido, solicitando novos números. É importante destacar que, para comparar strings, o método `equals()` deve ser utilizado no lugar do operador `==`, garantindo uma comparação correta.
+
+## 6.3. For
+
+O loop `for` é uma estrutura de repetição controlada por uma variável de contador, que é atualizada após cada iteração. Sua sintaxe é a seguinte:
+
+```
+for (inicialização; condição lógica; incremento/decremento) {
+     instrução;
+}
+```
+
+A inicialização define o valor inicial da variável de controle. A condição lógica verifica se o loop deve continuar sendo executado, enquanto o incremento ou decremento atualiza o valor da variável de controle a cada iteração. Abaixo, segue um exemplo:
+
+```
+public class For {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+Neste exemplo, os valores de 0 a 10 são impressos no console. A variável de controle `i` é inicializada com o valor 0 e, enquanto `i` for menor ou igual a 10, o loop continuará sendo executado. A cada iteração, `i` é incrementada em uma unidade. Quando `i` atinge o valor 11, a condição se torna falsa e o loop é encerrado. Observa-se que a atualização da variável de controle ocorre diretamente na estrutura do `for`, o que dispensa a necessidade de modificá-la dentro do bloco de código (embora seja possível).
