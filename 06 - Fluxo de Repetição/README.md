@@ -36,3 +36,13 @@ public class While {
 Nesse código, a variável `numero` é iniciada com o valor 0. A cada iteração, ela é incrementada em uma unidade e seu valor é exibido no console. Quando `numero` atinge 10, a condição do `while` se torna falsa e o loop é encerrado.
 
 O teste da condição ocorre antes de cada iteração, o que significa que o loop pode não ser executado nenhuma vez se a condição for falsa desde o início. Para garantir que o bloco de código seja executado ao menos uma vez, o teste pode ser movido para o final do loop, utilizando a estrutura `do-while`.
+
+## 6.2. Do-While
+
+No loop `do-while`, o bloco de código é executado primeiro, e a condição é testada posteriormente para verificar se o bloco será repetido. A sintaxe básica desse loop é:
+
+```
+do {
+     instrução;
+} while (condição);
+```
