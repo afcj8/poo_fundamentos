@@ -53,3 +53,30 @@ A principal diferença entre os loops `while` e `do-while` é a posição do tes
     <img src="../imgs/do_while.png" width="30%" style="max-height: 80vh;"/>
     <p>Figura 6.2: Fluxograma (do-while).</p>
 </div>
+
+No exemplo abaixo, o código realiza a soma de dois números digitados e verifica se o usuário deseja realizar outra operação:
+
+```
+import java.util.Scanner;
+
+public class DoWhile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String opcao;
+        do {
+           System.out.print("Digite um número: ");
+           int n1 = sc.nextInt();
+           System.out.print("Digite outro número: ");
+           int n2 = sc.nextInt();
+           int soma = n1 + n2;
+           System.out.println("A soma é: " + soma);
+           System.out.print("Deseja realizar outra operação? S/N: ");
+           opcao = sc.next();
+        } while (opcao.equals("S"));
+        System.out.println("Fim do programa");
+        sc.close();
+    }
+}
+```
+
+Nesse exemplo, o programa realiza a leitura de dois números e calcula sua soma. Após a operação, é verificado se o usuário deseja continuar, com base na resposta fornecida. Caso a resposta seja "S", o loop é repetido, solicitando novos números. É importante destacar que, para comparar strings, o método `equals()` deve ser utilizado no lugar do operador `==`, garantindo uma comparação correta.
