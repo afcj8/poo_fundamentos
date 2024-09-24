@@ -102,3 +102,5 @@ public class For {
     }
 }
 ```
+
+Neste exemplo, os valores de 0 a 10 são impressos no console. A variável de controle `i` é inicializada com o valor 0 e, enquanto `i` for menor ou igual a 10, o loop continuará sendo executado. A cada iteração, `i` é incrementada em uma unidade. Quando `i` atinge o valor 11, a condição se torna falsa e o loop é encerrado. Observa-se que a atualização da variável de controle ocorre diretamente na estrutura do `for`, o que dispensa a necessidade de modificá-la dentro do bloco de código (embora seja possível).
