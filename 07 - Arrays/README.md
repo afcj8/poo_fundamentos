@@ -6,3 +6,72 @@ Um array é uma estrutura de dados que armazena uma coleção de elementos do me
     <img src="../imgs/array.png" width="50%"/>
     <p>Figura 7.1: Array com 10 posições.</p>
 </div>
+
+Em Java, um array é um objeto e, portanto, pode-se utilizar o operador `new` para criar uma nova instância de um array. Para declarar uma variável que armazena um array, é necessário especificar o tipo do array, seguido de colchetes `[]` e o nome da variável. Exemplo:
+
+```
+int[] notas;
+```
+
+Neste caso, a variável `notas` é declarada para armazenar um conjunto de números inteiros. Também é possível colocar os colchetes após o nome da variável, como no exemplo a seguir:
+
+```
+int notas[];
+```
+
+Ambas as formas produzem o mesmo resultado. Após a declaração, o array pode ser inicializado com o operador `new`:
+
+```
+int[] notas = new int[40];
+```
+
+Ao declarar um array, é necessário definir seu comprimento nos colchetes. No exemplo acima, cria-se um array com capacidade para armazenar 40 números inteiros. Em arrays de números, os elementos são inicializados com `0`, em arrays de booleanos com `false`, e em arrays de objetos com `null`.
+
+Para atribuir um valor a uma posição específica no array, utiliza-se o índice correspondente nos colchetes:
+
+```
+notas[0] = 10;
+```
+
+Para acessar um valor armazenado no array, basta referenciar o índice:
+
+```
+System.out.println(notas[0]);
+```
+
+No exemplo acima, o valor armazenado no índice 0 é recuperado e exibido no console.
+
+Há duas maneiras de declarar e inicializar um array com valores predeterminados. A primeira consiste em utilizar chaves `{}` com os valores separados por vírgulas:
+
+```
+int[] notas = {10, 9, 8, 2};
+```
+
+A segunda forma é semelhante, mas inclui o operador `new`:
+
+```
+int[] notas = new int[] {10, 9, 8, 2};
+```
+
+Essas duas abordagens produzem o mesmo resultado que o código abaixo:
+
+```
+int[] notas = new int[4];
+notas[0] = 10;
+notas[1] = 9;
+notas[2] = 8;
+notas[3] = 2;
+```
+
+Arrays em Java podem ser criados com qualquer tipo de dado, seja ele primitivo ou uma classe Java:
+
+```
+byte[] bytes = new byte[4];
+short[] shorts = new short[5];
+double[] doubles = new double[8];
+float[] floats = new float[2];
+String[] strings = new String[10];
+Conta[] contas = new Conta[3];
+```
+
+Para acessar todas as posições de um array, os loops são uma ferramenta adequada, pois permitem percorrer todas as posições de forma sequencial, com a quantidade de iterações sendo igual ao tamanho do array. Por exemplo, para armazenar as notas de uma turma de 10 alunos e calcular sua média, pode-se utilizar um loop para ler as notas e, em seguida, calcular e exibir a média.
