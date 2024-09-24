@@ -18,3 +18,17 @@ Se a condição for verdadeira, a instrução é executada. Quando a condição 
     <img src="../imgs/while.png" width="50%" style="max-height: 120vh;"/>
     <p>Figura 6.1: Fluxograma (while).</p>
 </div>
+
+Por exemplo, o código a seguir imprime os números de 1 a 10:
+
+```
+public class While {
+    public static void main(String[] args) {
+        int numero = 0;
+        while (numero < 10) {
+            numero++;
+            System.out.println(numero);
+        }
+    }
+}
+```
