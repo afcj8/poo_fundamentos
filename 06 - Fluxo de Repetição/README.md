@@ -80,3 +80,13 @@ public class DoWhile {
 ```
 
 Nesse exemplo, o programa realiza a leitura de dois números e calcula sua soma. Após a operação, é verificado se o usuário deseja continuar, com base na resposta fornecida. Caso a resposta seja "S", o loop é repetido, solicitando novos números. É importante destacar que, para comparar strings, o método `equals()` deve ser utilizado no lugar do operador `==`, garantindo uma comparação correta.
+
+## 6.3. For
+
+O loop `for` é uma estrutura de repetição controlada por uma variável de contador, que é atualizada após cada iteração. Sua sintaxe é a seguinte:
+
+```
+for (inicialização; condição lógica; incremento/decremento) {
+     instrução;
+}
+```
