@@ -11,3 +11,10 @@ while (condição) {
      instrução;
 }
 ```
+
+Se a condição for verdadeira, a instrução é executada. Quando a condição for falsa, o loop é interrompido, e o fluxo do programa segue a próxima instrução. Vale ressaltar que o loop `while` não será executado se a condição inicial for falsa. A figura 6.1 a seguir mostra o fluxograma do laço while.
+
+<div align="center">
+    <img src="../imgs/while.png" width="50%" style="max-height: 120vh;"/>
+    <p>Figura 6.1: Fluxograma (while).</p>
+</div>
