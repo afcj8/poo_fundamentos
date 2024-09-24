@@ -90,3 +90,15 @@ for (inicialização; condição lógica; incremento/decremento) {
      instrução;
 }
 ```
+
+A inicialização define o valor inicial da variável de controle. A condição lógica verifica se o loop deve continuar sendo executado, enquanto o incremento ou decremento atualiza o valor da variável de controle a cada iteração. Abaixo, segue um exemplo:
+
+```
+public class For {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
