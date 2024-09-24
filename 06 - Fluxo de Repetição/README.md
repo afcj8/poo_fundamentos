@@ -12,10 +12,10 @@ while (condição) {
 }
 ```
 
-Se a condição for verdadeira, a instrução é executada. Quando a condição for falsa, o loop é interrompido, e o fluxo do programa segue a próxima instrução. Vale ressaltar que o loop `while` não será executado se a condição inicial for falsa. A figura 6.1 a seguir mostra o fluxograma do laço while.
+Se a condição for verdadeira, a instrução é executada. Quando a condição for falsa, o loop é interrompido, e o fluxo do programa segue a próxima instrução. Vale ressaltar que o loop `while` não será executado se a condição inicial for falsa. A figura 6.1 a seguir mostra o fluxograma do laço `while`.
 
 <div align="center">
-    <img src="../imgs/while.png" width="50%" style="max-height: 120vh;"/>
+    <img src="../imgs/while.png" width="30%" style="max-height: 80vh;"/>
     <p>Figura 6.1: Fluxograma (while).</p>
 </div>
 
@@ -46,3 +46,10 @@ do {
      instrução;
 } while (condição);
 ```
+
+A principal diferença entre os loops `while` e `do-while` é a posição do teste: no `do-while`, o teste ocorre no final, garantindo que o código seja executado pelo menos uma vez, independentemente da condição. Esse comportamento é útil quando não se sabe previamente quantas vezes o loop será executado, pois depende de interações ou valores inseridos pelo usuário. A figura 6.2 a seguir mostra o fluxograma do laço `do-while`.
+
+<div align="center">
+    <img src="../imgs/do_while.png" width="30%" style="max-height: 80vh;"/>
+    <p>Figura 6.2: Fluxograma (do-while).</p>
+</div>
