@@ -139,3 +139,88 @@ public class Notas {
     }
 }
 ```
+
+Além de arrays de tipos primitivos, também é possível criar arrays de objetos, chamados de "arrays de referências". No exemplo abaixo, um array com 5 posições é criado para armazenar referências a objetos da classe `Carro`:
+
+```
+Carro[] carros = new Carro[5];
+```
+
+Neste momento, nenhum objeto do tipo `Carro` foi criado, e as posições do array estão vazias (inicializadas como `null`). Para popular o array, é necessário instanciar os objetos e armazenar suas referências nas posições do array:
+
+```
+Carro[] carros = new Carro[5];
+Carro carro = new Carro();
+carro.setModelo("Gol");
+carros[0] = carro;
+```
+
+Assim, a posição 0 do array contém uma referência a um objeto `Carro`, enquanto as outras posições permanecem vazias (`null`). A figura 7.2 a seguir representa o estado atual do array de `carros`:
+
+<div align="center">
+    <img src="../imgs/array_carros.png" width="25%"/>
+    <p>Figura 7.2: Estado atual do array de carros.</p>
+</div>
+
+Para recuperar o valor do modelo do carro armazenado na primeira posição do vetor, utiliza-se o seguinte código:
+
+```
+String modelo = carros[0].getModelo();
+System.out.println(modelo);
+```
+
+Esse código acessa o valor do modelo do carro na primeira posição e o imprime no console. Para percorrer o vetor de referências, pode-se utilizar as estruturas de repetição convencionais, como `for`. No entanto, uma alternativa mais simples é o uso do comando for-each, que não exige uma variável de controle para indicar a posição do elemento no vetor.
+
+A sintaxe do for-each é:
+
+```
+for (<tipo> <variável> : array) {
+     instrução;
+}
+```
+
+No exemplo, o primeiro parâmetro refere-se ao tipo de dado do array, o segundo é uma variável que recebe cada item do vetor, e o terceiro é o próprio array que será percorrido. Para o vetor de carros mencionado, pode-se utilizar o seguinte código para percorrê-lo:
+
+```
+for (Carro carro : carros) {
+     System.out.println(carro.getModelo());
+}
+```
+
+Aqui, `Carro` é o tipo do array, `carro` é a variável que recebe cada item, e o vetor de carros é o array a ser percorrido.
+
+Da mesma forma, é possível aplicar o for-each em arrays de tipos primitivos, como o array de notas:
+
+```
+for (float nota : notas) {
+     System.out.println(nota);
+}
+```
+
+Além dos arrays unidimensionais, também existem os arrays multidimensionais, conhecidos como matrizes. Essas estruturas consistem em arrays que armazenam outros arrays. Dessa forma, cada posição do array contém outro array, e esse processo pode se repetir em várias dimensões, conforme necessário.
+
+Por exemplo, para armazenar as notas dos alunos de um curso com 9 disciplinas e 40 alunos em cada disciplina, pode-se criar um array de 9 posições, em que cada uma contém um array de 40 elementos:
+
+```
+int[][] notas = new int[9][40];
+```
+
+Esse array multidimensional possui 360 posições, sendo uma para cada aluno em cada uma das 9 disciplinas. Para armazenar a nota do primeiro aluno na primeira disciplina, utiliza-se o seguinte comando:
+
+```
+notas[0][0] = 10;
+```
+
+Para acessar a nota do segundo aluno na mesma disciplina, basta alterar o índice:
+
+```
+notas[0][1] = 9;
+```
+
+Os arrays multidimensionais seguem a mesma lógica dos unidimensionais, com o primeiro índice de cada array iniciando em 0. Além disso, é possível criar arrays com mais de duas dimensões, como no exemplo a seguir, que representa um array tridimensional:
+
+```
+int[][][] notas = new int[10][50][10];
+```
+
+Arrays de múltiplas dimensões permitem armazenar dados de forma organizada e são uma ferramenta poderosa para lidar com grandes volumes de informações estruturadas.
