@@ -9,3 +9,12 @@ Em termos práticos, para instanciar uma classe, utiliza-se o operador `new`:
 ```
 new Conta();
 ```
+
+No exemplo acima, foi criado um novo objeto do tipo `Conta`. Contudo, é necessário armazenar esse objeto em uma variável para poder utilizá-lo posteriormente. Isso é feito declarando uma variável do tipo da classe e atribuindo a ela o objeto criado:
+
+```
+Conta cc = new Conta();
+Conta poupanca = new Conta();
+```
+
+Neste caso, as variáveis `cc` e `poupanca` armazenam as referências a dois objetos distintos do tipo `Conta`. Assim como em um banco real, onde é possível possuir várias contas, no programa é possível instanciar múltiplos objetos da mesma classe, como no exemplo acima.
