@@ -75,3 +75,67 @@ Conta[] contas = new Conta[3];
 ```
 
 Para acessar todas as posições de um array, os loops são uma ferramenta adequada, pois permitem percorrer todas as posições de forma sequencial, com a quantidade de iterações sendo igual ao tamanho do array. Por exemplo, para armazenar as notas de uma turma de 10 alunos e calcular sua média, pode-se utilizar um loop para ler as notas e, em seguida, calcular e exibir a média.
+
+No exemplo apresentado, o scanner é instanciado para realizar a leitura do teclado. Em seguida, cria-se um array de `float` com 10 posições. Utiliza-se a estrutura de repetição `for` para ler e armazenar as notas dos alunos em cada posição do array.
+
+```
+import java.util.Scanner;
+
+public class Notas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float[] notas = new float[10];
+        for (int i = 0; i < 10; i++) {
+            System.err.print("Digite a nota do aluno: ");
+            notas[i] = sc.nextFloat();
+        }
+        sc.close();
+    }
+}
+```
+
+Observa-se que a variável `i` é utilizada como índice para controlar a posição do array que será preenchida. Na primeira iteração, o valor de `i` será 0, correspondente à primeira posição do array. Na última iteração, o valor de `i` será 9, que corresponde à última posição. Como os arrays em Java iniciam na posição 0, um array de 10 posições vai de 0 a 9.
+
+É possível otimizar o código ao invés de fixar o valor 10 no `for`, utilizando o tamanho do array como critério de parada:
+
+```
+for (int i = 0; i < notas.length; i++)
+```
+
+A seguir, implementa-se a segunda parte do programa: calcular a média das notas. Para isso, utiliza-se outro loop para somar todas as notas e, em seguida, divide-se pela quantidade de notas.
+
+```
+float totalNotas = 0;
+for (int i = 0; i < notas.length; i++) {
+     totalNotas = totalNotas + notas[i];
+}
+float media = totalNotas / notas.length;
+System.out.printf("A média das notas é: %.2f", media);
+sc.close();
+```
+
+Primeiro, declara-se uma variável `totalNotas` do tipo `float` para armazenar a soma das notas. O loop percorre o array, somando as notas em `totalNotas`. Após somar, o total é dividido pela quantidade de alunos (`notas.length`) para calcular a média e exibir o resultado no console.
+
+**Programa Completo:**
+
+```
+import java.util.Scanner;
+
+public class Notas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float[] notas = new float[10];
+        for (int i = 0; i < 10; i++) {
+            System.err.print("Digite a nota do aluno: ");
+            notas[i] = sc.nextFloat();
+        }
+        float totalNotas = 0;
+        for (int i = 0; i < notas.length; i++) {
+            totalNotas = totalNotas + notas[i];
+        }
+        float media = totalNotas / notas.length;
+        System.out.printf("A média das notas é: %.2f", media);
+        sc.close();
+    }
+}
+```
