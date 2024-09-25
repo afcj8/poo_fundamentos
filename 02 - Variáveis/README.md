@@ -77,8 +77,12 @@ public class Conversoes {
 No entanto, em certos casos, não é possível realizar conversões automáticas. Por exemplo, converter um valor do tipo `double` para `int` não ocorre de forma automática, pois há risco de perda de informações. Para realizar esse tipo de conversão, chamada de "casting", é necessário indicar explicitamente o tipo de destino entre parênteses:
 
 ```
-double x = 10.0;
-int y = (int) x;
+public class Cast {
+    public static void main(String[] args) {
+        double x = 10.5;
+        int y = (int) x;
+    }
+}
 ```
 
 No exemplo acima, o valor de `x`, do tipo `double`, é convertido para `int`, e a variável `y` recebe apenas a parte inteira do número, resultando na perda da parte fracionária.

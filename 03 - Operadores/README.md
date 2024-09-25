@@ -28,12 +28,31 @@ Parênteses podem ser utilizados para agrupar e priorizar operações, tal como 
 (x + y) * z
 ```
 
-Nesse caso, a soma `x + y` é realizada primeiro.
+Nesse caso, a soma `x + y` é realizada primeiro. Essas operações podem ser ilustradas pelo exemplo de código a seguir:
+
+```
+public class OperadoresAritmeticos {
+    public static void main(String[] args) {
+        int x = 9;
+        int y = 2;
+
+        int soma = x + y;
+        int subtracao = x - y;
+        int multiplicacao = x * y;
+        int divisao = x / y;
+        int resto = x % y;
+
+        System.out.println("Resultado da adição       : " + soma);
+        System.out.println("Resultado da subtração    : " + subtracao);
+        System.out.println("Resultado da multiplicação: " + multiplicacao);
+        System.out.println("Resultado da divisão      : " + divisao);
+        System.out.println("Resultado do módulo       : " + resto);
+    }
+}
+```
+No exemplo, são declaradas duas variáveis inteiras, `x` e `y`, e em seguida são calculados a soma, subtração, multiplicação, divisão e o resto da divisão. Os resultados são exibidos utilizando `System.out.println`. Na operação de divisão, o valor fracionário é descartado, retornando apenas a parte inteira.
 
 ## 3.2. Operadores de Atribuição
-
-
-Aqui está uma versão aprimorada e mais fluida do seu texto:
 
 Como já mencionado, a atribuição de valores a uma variável é feita utilizando o símbolo de igual `=`. A atribuição ocorre sempre após o processamento das expressões do lado direito. Por exemplo:
 
@@ -43,17 +62,6 @@ x = x + 15;
 ```
 
 Qual é o valor final de `x`? Primeiro, a variável `x` é inicializada com o valor `10`. Em seguida, a expressão `x + 15` é processada, retornando o valor `25`. Após isso, esse valor é atribuído de volta à variável `x`.
-
-
-Aqui está uma versão aprimorada e mais fluida do seu texto:
-
-Como já mencionado, a atribuição de valores a uma variável é feita utilizando o símbolo de igual =. A atribuição ocorre sempre após o processamento das expressões do lado direito. Por exemplo:
-
-java
-Copiar código
-int x = 10;
-x = x + 15;
-Qual é o valor final de x? Primeiro, a variável x é inicializada com o valor 10. Em seguida, a expressão x + 15 é processada, retornando o valor 25. Após isso, esse valor é atribuído de volta à variável x.
 
 Para simplificar essa operação, que é bastante comum na programação, existem operadores específicos de atribuição. Assim, o código pode ser reescrito da seguinte forma:
 

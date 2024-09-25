@@ -11,7 +11,7 @@ if (condição) {
 As chaves `{}` delimitam o bloco de código pertencente ao `if`. A condição é escrita entre parênteses e pode incluir expressões combinadas com operadores lógicos. Se a condição for verdadeira, o bloco de código dentro do `if` será executado. A figura 4.1 Abaixo mostra o comportamento básico de um `if`.
 
 <div align="center">
-    <img src="../imgs/comando_if.png" width="50%" style="max-height: 80vh;"/>
+    <img src="../imgs/comando_if.png" width="30%" style="max-height: 80vh;"/>
     <p>Figura 4.1: Fluxograma (comando if).</p>
 </div>
 
@@ -28,7 +28,7 @@ if (condição) {
 Quando a condição no `if` é falsa, o bloco de código do `else` será executado. Isso permite que o programa tenha um fluxo alternativo de execução, conforme ilustrado no fluxograma de um comando `if-else`.
 
 <div align="center">
-    <img src="../imgs/comando_if_else.png" width="50%" style="max-height: 80vh;"/>
+    <img src="../imgs/comando_if_else.png" width="30%" style="max-height: 80vh;"/>
     <p>Figura 4.2: Fluxograma (comando if-else).</p>
 </div>
 
