@@ -116,3 +116,22 @@ public class Conta {
     }
 }
 ```
+
+Nesse exemplo, ao criar uma instância de `Conta` (`new Conta();`), o atributo `saldo` é inicializado com o valor 100, e a frase "Criando uma instância de Conta..." é exibida no console.
+
+Também é possível definir construtores que recebem parâmetros para inicializar os atributos com valores fornecidos, conforme mostrado abaixo:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // construtor com parâmetros
+    public Conta(double valor) {
+        saldo = valor;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
+
+Nesse caso, o construtor padrão (sem parâmetros) não estará mais disponível, pois a classe `Conta` possui apenas o construtor que recebe um valor do tipo `double` como parâmetro, utilizado para inicializar o atributo `saldo`. O uso seria: `new Conta(100);`.
