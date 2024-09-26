@@ -28,3 +28,23 @@ public class Conta {
     }
 }
 ```
+
+Em seguida, cria-se uma classe `Teste` com o método `main`, que será responsável por criar instâncias da classe `Conta`.
+
+```
+public class Teste {
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Dentro do método `main`, pode-se instanciar a classe `Conta`, armazenando a referência do objeto em uma variável, como exemplificado a seguir:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        Conta cc = new Conta();
+    }
+}
+```
