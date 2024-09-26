@@ -26,3 +26,9 @@ class Conta {
     // atributos e métodos da classe
 }
 ```
+
+## 7.1. Atributos
+
+Uma classe em Java pode conter um ou mais atributos, os quais são utilizados para armazenar informações específicas de um objeto após a classe ser instanciada. Essas informações diferenciam um objeto de outro.
+
+Os atributos em uma classe são definidos por variáveis, que podem ser de tipos primitivos ou de referência. No caso de tipos de referência, a variável armazena um ponteiro para um objeto. Por exemplo, a classe `Conta` pode conter uma variável que armazena a referência a um objeto `Cliente`, estabelecendo uma relação entre a conta e o cliente.
