@@ -135,3 +135,20 @@ public class Conta {
 ```
 
 Nesse caso, o construtor padrão (sem parâmetros) não estará mais disponível, pois a classe `Conta` possui apenas o construtor que recebe um valor do tipo `double` como parâmetro, utilizado para inicializar o atributo `saldo`. O uso seria: `new Conta(100);`.
+
+Assim como em métodos comuns, a palavra-chave `this` pode ser utilizada no construtor para referenciar o objeto atual, diferenciando os atributos da classe dos parâmetros recebidos, como no exemplo:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // utilizando this no construtor
+    public Conta(double saldo) {
+        this.saldo = saldo;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
+
+Aqui, o parâmetro `saldo` é atribuído ao atributo `saldo` da classe utilizando `this` para evitar ambiguidade entre o nome do parâmetro e o nome do atributo.
