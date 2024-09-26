@@ -152,3 +152,61 @@ public class Conta {
 ```
 
 Aqui, o parâmetro `saldo` é atribuído ao atributo `saldo` da classe utilizando `this` para evitar ambiguidade entre o nome do parâmetro e o nome do atributo.
+
+Uma classe também pode ter múltiplos construtores, cada um com diferentes quantidades ou tipos de parâmetros, recurso conhecido como sobrecarga de construtores. Isso permite a criação de objetos de diferentes maneiras, conforme mostrado no exemplo abaixo:
+
+```
+public class Conta {
+    // atributos
+    double saldo;
+    int agencia;
+
+    // construtor sem argumentos
+    public Conta() {
+    }
+
+    // construtor que recebe um valor double
+    public Conta(double saldo) {
+        this.saldo = saldo;
+    }
+
+    // construtor que recebe um valor int e um double
+    public Conta(int agencia, double saldo) {
+        this.agencia = agencia;
+        this.saldo = saldo;
+    }
+}
+```
+
+Com esses três construtores, a classe `Conta` pode ser instanciada das seguintes formas:
+
+- new Conta();
+- new Conta(100);
+- new Conta(10, 100);
+
+Adicionalmente, o `this` também pode ser utilizado para invocar um construtor a partir de outro, como exemplificado a seguir:
+
+```
+public class Conta {
+    // atributos
+    double saldo;
+    int agencia;
+
+    // construtor sem argumentos
+    public Conta() {
+    }
+
+    // construtor que recebe um valor double
+    public Conta(double saldo) {
+        this.saldo = saldo;
+    }
+
+    // construtor que recebe um valor int e um double
+    public Conta(int agencia, double saldo) {
+        this(saldo);    // chama o construtor que recebe um double
+        this.agencia = agencia;
+    }
+}
+```
+
+Neste último exemplo, o construtor que recebe dois parâmetros (`agencia` e `saldo`) chama o construtor que aceita apenas o `saldo` usando `this(saldo);`. Isso permite reaproveitar a lógica de inicialização de atributos entre diferentes construtores.
