@@ -76,7 +76,7 @@ Outro conceito relevante é o uso da palavra reservada `this`. Ela é utilizada 
 ```
 public class Conta {
     // atributo
-    double agencia;
+    int agencia;
 
     public void setAgencia(int agencia) {
         this.agencia = agencia;
@@ -85,3 +85,128 @@ public class Conta {
 ```
 
 Nesse exemplo, `this.agencia` faz referência ao atributo da classe, diferenciando-o da variável local `agencia` recebida como argumento no método `setAgencia`. Isso garante clareza e evita ambiguidades no código.
+
+## 8.2. Construtor
+
+Na Programação Orientada a Objetos, é possível definir métodos especiais denominados construtores, que são executados automaticamente quando objetos de uma classe são criados. Esses métodos auxiliam na inicialização do objeto, podendo atribuir valores padrão aos atributos ou valores fornecidos no momento da criação, além de permitir a chamada de outros métodos.
+
+Um construtor é invocado sempre que se utiliza a instrução `new` para criar uma instância de uma classe. Durante esse processo, o Java executa três etapas:
+
+1. Alocação de memória para o objeto;
+2. Inicialização dos atributos com valores padrão ou iniciais;
+3. Chamada ao construtor da classe.
+
+Construtores se assemelham a métodos comuns, mas possuem três diferenças fundamentais:
+
+1. Têm o mesmo nome da classe;
+2. Não possuem tipo de retorno, nem mesmo `void`;
+3. Não podem utilizar a instrução `return` para devolver valores.
+
+Toda classe contém, no mínimo, um construtor. Se nenhum construtor for declarado, o Java fornece um construtor padrão, sem parâmetros. No entanto, caso algum construtor seja especificado, o construtor padrão não será mais gerado automaticamente. A seguir, há um exemplo de construtor simples:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // construtor
+    public Conta() {
+        saldo = 100;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
+
+Nesse exemplo, ao criar uma instância de `Conta` (`new Conta();`), o atributo `saldo` é inicializado com o valor 100, e a frase "Criando uma instância de Conta..." é exibida no console.
+
+Também é possível definir construtores que recebem parâmetros para inicializar os atributos com valores fornecidos, conforme mostrado abaixo:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // construtor com parâmetros
+    public Conta(double valor) {
+        saldo = valor;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
+
+Nesse caso, o construtor padrão (sem parâmetros) não estará mais disponível, pois a classe `Conta` possui apenas o construtor que recebe um valor do tipo `double` como parâmetro, utilizado para inicializar o atributo `saldo`. O uso seria: `new Conta(100);`.
+
+Assim como em métodos comuns, a palavra-chave `this` pode ser utilizada no construtor para referenciar o objeto atual, diferenciando os atributos da classe dos parâmetros recebidos, como no exemplo:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // utilizando this no construtor
+    public Conta(double saldo) {
+        this.saldo = saldo;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
+
+Aqui, o parâmetro `saldo` é atribuído ao atributo `saldo` da classe utilizando `this` para evitar ambiguidade entre o nome do parâmetro e o nome do atributo.
+
+Uma classe também pode ter múltiplos construtores, cada um com diferentes quantidades ou tipos de parâmetros, recurso conhecido como sobrecarga de construtores. Isso permite a criação de objetos de diferentes maneiras, conforme mostrado no exemplo abaixo:
+
+```
+public class Conta {
+    // atributos
+    double saldo;
+    int agencia;
+
+    // construtor sem argumentos
+    public Conta() {
+    }
+
+    // construtor que recebe um valor double
+    public Conta(double saldo) {
+        this.saldo = saldo;
+    }
+
+    // construtor que recebe um valor int e um double
+    public Conta(int agencia, double saldo) {
+        this.agencia = agencia;
+        this.saldo = saldo;
+    }
+}
+```
+
+Com esses três construtores, a classe `Conta` pode ser instanciada das seguintes formas:
+
+- new Conta();
+- new Conta(100);
+- new Conta(10, 100);
+
+Adicionalmente, o `this` também pode ser utilizado para invocar um construtor a partir de outro, como exemplificado a seguir:
+
+```
+public class Conta {
+    // atributos
+    double saldo;
+    int agencia;
+
+    // construtor sem argumentos
+    public Conta() {
+    }
+
+    // construtor que recebe um valor double
+    public Conta(double saldo) {
+        this.saldo = saldo;
+    }
+
+    // construtor que recebe um valor int e um double
+    public Conta(int agencia, double saldo) {
+        this(saldo);    // chama o construtor que recebe um double
+        this.agencia = agencia;
+    }
+}
+```
+
+Neste último exemplo, o construtor que recebe dois parâmetros (`agencia` e `saldo`) chama o construtor que aceita apenas o `saldo` usando `this(saldo);`. Isso permite reaproveitar a lógica de inicialização de atributos entre diferentes construtores.
