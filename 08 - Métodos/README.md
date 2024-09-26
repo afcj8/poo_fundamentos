@@ -43,3 +43,7 @@ double somar(double valor1, double valor2) {
 ```
 
 Nesse caso, o método `somar` recebe dois parâmetros (`valor1` e `valor2`) e retorna a soma de ambos. Dessa forma, os métodos fornecem aos objetos a capacidade de executar ações específicas, sendo essenciais para a implementação de comportamentos nas classes.
+
+## 8.1. Sobrecarga de Métodos
+
+Na Programação Orientada a Objetos (POO), um recurso comum é a sobrecarga de métodos. Sobrecarga refere-se à criação de várias versões de um mesmo método, diferenciadas pelo número ou tipo de parâmetros que recebem. O tipo de retorno, no entanto, não influencia a sobrecarga.
