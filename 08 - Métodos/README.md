@@ -76,7 +76,7 @@ Outro conceito relevante é o uso da palavra reservada `this`. Ela é utilizada 
 ```
 public class Conta {
     // atributo
-    double agencia;
+    int agencia;
 
     public void setAgencia(int agencia) {
         this.agencia = agencia;
@@ -85,3 +85,19 @@ public class Conta {
 ```
 
 Nesse exemplo, `this.agencia` faz referência ao atributo da classe, diferenciando-o da variável local `agencia` recebida como argumento no método `setAgencia`. Isso garante clareza e evita ambiguidades no código.
+
+## 8.2. Construtor
+
+Na Programação Orientada a Objetos, é possível definir métodos especiais denominados construtores, que são executados automaticamente quando objetos de uma classe são criados. Esses métodos auxiliam na inicialização do objeto, podendo atribuir valores padrão aos atributos ou valores fornecidos no momento da criação, além de permitir a chamada de outros métodos.
+
+Um construtor é invocado sempre que se utiliza a instrução `new` para criar uma instância de uma classe. Durante esse processo, o Java executa três etapas:
+
+1. Alocação de memória para o objeto;
+2. Inicialização dos atributos com valores padrão ou iniciais;
+3. Chamada ao construtor da classe.
+
+Construtores se assemelham a métodos comuns, mas possuem três diferenças fundamentais:
+
+1. Têm o mesmo nome da classe;
+2. Não possuem tipo de retorno, nem mesmo `void`;
+3. Não podem utilizar a instrução `return` para devolver valores.
