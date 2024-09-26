@@ -48,3 +48,54 @@ public class Teste {
     }
 }
 ```
+
+A variável `cc` armazenará a referência ao objeto `Conta`, permitindo o acesso aos seus atributos e métodos. O operador ponto (.) é utilizado para acessar as variáveis de instância e métodos do objeto. Por exemplo, para acessar o atributo `saldo` do objeto referenciado por `cc`, pode-se utilizar o seguinte código:
+
+```
+double valor = cc.saldo;
+System.out.println(cc.saldo);
+```
+
+Na primeira linha, o valor do atributo `saldo` é atribuído à variável `valor`, e na segunda, o valor do saldo é impresso no console. Para alterar o valor de um atributo, utiliza-se o operador de atribuição:
+
+```
+cc.saldo = 100;
+```
+
+Para invocar um método, a notação de ponto é semelhante:
+
+```
+cc.depositar(100);
+cc.verificarSaldo();
+```
+
+O exemplo abaixo demonstra a criação de mais uma instância da classe `Conta`, onde se atribuem valores aos atributos e se chamam métodos da classe:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        // Criação de um objeto Conta
+        Conta cc = new Conta();
+
+        // Atribuição de valores aos atributos do objeto
+        cc.numero = 321;
+        cc.agencia = 123;
+        cc.saldo = 100;
+
+        // Chamada do método depositar
+        cc.depositar(50);
+
+        // Verificação do saldo e impressão no console
+        System.out.println(cc.verificarSaldo()); // 150.0
+
+        // Criação de um objeto utilizando o construtor com parâmetros
+        Conta poupanca = new Conta(111, 222, 1000);
+
+        // Chamada do método retirar
+        poupanca.retirar(50);
+
+        // Verificação do saldo e impressão no console
+        System.out.println(poupanca.verificarSaldo());  // 950.0
+    }
+}
+```
