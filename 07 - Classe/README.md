@@ -32,3 +32,18 @@ class Conta {
 Uma classe em Java pode conter um ou mais atributos, os quais são utilizados para armazenar informações específicas de um objeto após a classe ser instanciada. Essas informações diferenciam um objeto de outro.
 
 Os atributos em uma classe são definidos por variáveis, que podem ser de tipos primitivos ou de referência. No caso de tipos de referência, a variável armazena um ponteiro para um objeto. Por exemplo, a classe `Conta` pode conter uma variável que armazena a referência a um objeto `Cliente`, estabelecendo uma relação entre a conta e o cliente.
+
+Por convenção, os nomes dos atributos seguem o padrão lowerCamelCase, onde a primeira letra é minúscula e as letras iniciais das palavras subsequentes são maiúsculas. É recomendável o uso de nomes descritivos e substantivos para os atributos, como `saldo`, `dataNascimento` ou `email`. Nomes pouco claros, como `x`, `y` ou `abc`, devem ser evitados.
+
+As variáveis que definem um atributo em uma classe são chamadas de variáveis de instância, pois elas somente armazenam dados após a criação de um objeto, ou seja, após a instanciação da classe. A sintaxe para declarar uma variável de instância é similar à de variáveis locais. Conforme o exemplo abaixo:
+
+```
+public class Conta {
+    int numero;
+    int agencia;
+    double saldo = 100;
+    Calendar dataAbertura;
+    String tipo;
+    Cliente cliente;
+}
+```
