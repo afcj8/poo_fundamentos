@@ -43,3 +43,45 @@ double somar(double valor1, double valor2) {
 ```
 
 Nesse caso, o método `somar` recebe dois parâmetros (`valor1` e `valor2`) e retorna a soma de ambos. Dessa forma, os métodos fornecem aos objetos a capacidade de executar ações específicas, sendo essenciais para a implementação de comportamentos nas classes.
+
+## 8.1. Sobrecarga de Métodos
+
+Na Programação Orientada a Objetos (POO), um recurso comum é a sobrecarga de métodos. Sobrecarga refere-se à criação de várias versões de um mesmo método, diferenciadas pelo número ou tipo de parâmetros que recebem. O tipo de retorno, no entanto, não influencia a sobrecarga.
+
+Duas características são essenciais para diferenciar métodos com o mesmo nome: a quantidade de parâmetros e seus tipos. Essas características compõem a assinatura do método. O uso de múltiplos métodos com o mesmo nome, mas com assinaturas distintas, caracteriza a sobrecarga de métodos. O exemplo a seguir ilustra essa técnica:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // método com um parâmetro do tipo double
+    public void retirar(double valor) {
+        saldo = saldo - valor;
+    }
+
+    // método com dois parâmetros do tipo double
+    public void retirar(double valor, double taxa) {
+        saldo = saldo - valor - taxa;
+    }
+}
+```
+
+No exemplo acima, a classe `Conta` define dois métodos chamados `retirar`, mas com assinaturas diferentes. Um método aceita apenas o valor a ser retirado, enquanto o outro também recebe o valor da taxa de retirada.
+
+A sobrecarga de métodos permite que um mesmo método se comporte de forma distinta, dependendo dos argumentos fornecidos. Quando um método é invocado em um objeto, o Java seleciona a versão adequada com base no nome do método e nos parâmetros fornecidos.
+
+Outro conceito relevante é o uso da palavra reservada `this`. Ela é utilizada para referenciar o próprio objeto, permitindo o acesso a seus atributos, métodos e construtores. Quando há duas variáveis com o mesmo nome — uma pertencente à instância da classe (atributo) e outra pertencente ao método — a palavra `this` é empregada para diferenciar o atributo da classe, como demonstrado no código a seguir:
+
+```
+public class Conta {
+    // atributo
+    double agencia;
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+}
+```
+
+Nesse exemplo, `this.agencia` faz referência ao atributo da classe, diferenciando-o da variável local `agencia` recebida como argumento no método `setAgencia`. Isso garante clareza e evita ambiguidades no código.
