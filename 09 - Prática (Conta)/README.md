@@ -99,3 +99,20 @@ public class Teste {
     }
 }
 ```
+
+No exemplo acima, dois objetos da classe `Conta` foram criados. No primeiro objeto (`cc`), os valores dos atributos foram atribuídos manualmente, e os métodos `depositar` e `verificarSaldo` foram chamados, imprimindo o saldo no console. O segundo objeto (`poupanca`) foi criado utilizando o construtor que recebe parâmetros para inicializar seus atributos. Após a criação, os métodos `retirar` e `verificarSaldo` foram invocados.
+
+No caso da instância `cc`, o saldo inicial era 100, e o método `depositar` adicionou 50 a esse valor. Portanto, o saldo final exibido será 150. Já a instância `poupanca` foi criada com saldo inicial de 1000, e o método `retirar` subtraiu 50, resultando em um saldo de 950.
+
+Cada objeto possui seus próprios valores para os atributos e comportamentos, que operam de forma independente em cada instância. A estrutura de memória dos objetos reflete essa independência, já que cada instância armazena seus próprios dados.
+
+Além disso, é possível que uma variável que referencia um objeto tenha o valor `null`, o que significa que ela não está referenciando nenhum objeto. Nesse caso, tentar acessar um atributo ou método dessa variável resultará em um erro de execução. Para evitar esse problema, recomenda-se verificar se a variável não é `null` antes de realizar qualquer operação, como mostrado no exemplo:
+
+```
+Conta cc = null;
+if (cc != null) {
+    System.out.println("Existe uma conta!");
+}
+```
+
+Esse tipo de verificação é útil em casos onde se deseja garantir que uma variável está associada a um objeto antes de realizar operações sobre ela.
