@@ -47,3 +47,35 @@ public class Conta {
     Cliente cliente;
 }
 ```
+
+Diferentemente das variáveis locais, as variáveis de instância recebem valores padrão caso não sejam inicializadas. Por exemplo:
+
+```
+class Conta {
+    double saldo;
+}
+```
+
+Neste caso, o atributo `saldo` recebe o valor padrão de `0.0`. Caso um valor seja atribuído no momento da declaração, o valor padrão será sobrescrito:
+
+```
+class Conta {
+    double saldo = 10.0;
+}
+```
+
+A tabela a seguir apresenta os valores padrão para diferentes tipos de variáveis de instância:
+
+| Tipo    | Valor Padrão |
+| ------- | ------------ |
+| byte    |       0      |
+| short   |       0      |
+| int     |       0      |
+| long    |       0L     |
+| float   |      0.0f    |
+| double  |      0.0d    |
+| char    |   '\u0000'   |
+| String  |     null     |
+| boolean |     false    |
+
+Assim, os atributos de uma classe garantem que os objetos criados a partir dela contenham informações únicas, com valores iniciais definidos, quando necessário.
