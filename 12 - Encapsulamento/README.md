@@ -23,3 +23,21 @@ public class Pessoa {
     }
 }
 ```
+
+Nesse caso, o valor do atributo `idade` só pode ser alterado ou acessado por meio dos métodos `get` e `set`. A convenção de nomenclatura para métodos de alteração de valor de atributos envolve a adição da palavra `set` antes do nome do atributo, enquanto os métodos de recuperação usam a palavra `get`. Para atributos do tipo booleano, pode-se utilizar a palavra `is` antes do nome do atributo, como mostrado no exemplo:
+
+```
+public class Cliente {
+    private boolean especial;
+
+    public void setEspecial(boolean especial) {
+        this.especial = especial;
+    }
+
+    public boolean isEspecial() {
+        return especial;
+    }
+}
+```
+
+Assim, o encapsulamento garante a integridade dos dados, controlando o acesso e protegendo-os de modificações indevidas.
