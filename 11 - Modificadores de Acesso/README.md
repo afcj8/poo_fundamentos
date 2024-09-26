@@ -1,0 +1,3 @@
+# 11. Modificadores de Acesso
+
+Os modificadores são palavras-chave que alteram as definições de uma classe, método, atributo ou construtor em Java. Entre os modificadores mais comuns, encontram-se `static`, `abstract` e `final`. Além disso, a linguagem Java disponibiliza três modificadores de acesso: `public`, `protected` e `private`. Caso nenhum modificador seja especificado, o nível de acesso padrão (default) é aplicado.
