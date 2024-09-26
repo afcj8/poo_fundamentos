@@ -29,3 +29,17 @@ public class Conta {
     }
 }
 ```
+
+Para que o método possa devolver um valor, é necessário definir o tipo de retorno. No exemplo acima, o método `recuperarSaldo` retorna um valor do tipo `double`, utilizando a instrução `return` para devolver o valor armazenado no atributo `saldo`.
+
+Caso o método não precise retornar um valor, utiliza-se o tipo de retorno `void`, como no caso do método `depositar`, que apenas atualiza o valor do saldo, sem retornar nada.
+
+Além disso, métodos podem receber valores por meio de parâmetros. Esses parâmetros são declarados na lista de argumentos, que consiste em variáveis separadas por vírgulas e definidas entre parênteses. Quando o método é chamado, os parâmetros recebem valores e se comportam como variáveis locais dentro do método. Conforme o exemplo a seguir:
+
+```
+double somar(double valor1, double valor2) {
+    return valor1 + valor2;
+}
+```
+
+Nesse caso, o método `somar` recebe dois parâmetros (`valor1` e `valor2`) e retorna a soma de ambos. Dessa forma, os métodos fornecem aos objetos a capacidade de executar ações específicas, sendo essenciais para a implementação de comportamentos nas classes.
