@@ -47,3 +47,22 @@ Nesse caso, o método `somar` recebe dois parâmetros (`valor1` e `valor2`) e re
 ## 8.1. Sobrecarga de Métodos
 
 Na Programação Orientada a Objetos (POO), um recurso comum é a sobrecarga de métodos. Sobrecarga refere-se à criação de várias versões de um mesmo método, diferenciadas pelo número ou tipo de parâmetros que recebem. O tipo de retorno, no entanto, não influencia a sobrecarga.
+
+Duas características são essenciais para diferenciar métodos com o mesmo nome: a quantidade de parâmetros e seus tipos. Essas características compõem a assinatura do método. O uso de múltiplos métodos com o mesmo nome, mas com assinaturas distintas, caracteriza a sobrecarga de métodos. O exemplo a seguir ilustra essa técnica:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // método com um parâmetro do tipo double
+    public void retirar(double valor) {
+        saldo = saldo - valor;
+    }
+
+    // método com dois parâmetros do tipo double
+    public void retirar(double valor, double taxa) {
+        saldo = saldo - valor - taxa;
+    }
+}
+```
