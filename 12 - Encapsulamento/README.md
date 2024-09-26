@@ -1,0 +1,3 @@
+# 12. Encapsulamento
+
+O encapsulamento é uma técnica aplicada a métodos e atributos de uma classe com o objetivo de proteger ou ocultar dados. Para encapsular um método, utiliza-se o nível de acesso mais restritivo, garantindo que ele só seja acessado internamente pela própria classe. Já os atributos, para serem controlados ou modificados, devem ter seus valores gerenciados por métodos específicos.
