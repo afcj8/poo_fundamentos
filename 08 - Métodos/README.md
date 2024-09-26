@@ -101,3 +101,18 @@ Construtores se assemelham a métodos comuns, mas possuem três diferenças fund
 1. Têm o mesmo nome da classe;
 2. Não possuem tipo de retorno, nem mesmo `void`;
 3. Não podem utilizar a instrução `return` para devolver valores.
+
+Toda classe contém, no mínimo, um construtor. Se nenhum construtor for declarado, o Java fornece um construtor padrão, sem parâmetros. No entanto, caso algum construtor seja especificado, o construtor padrão não será mais gerado automaticamente. A seguir, há um exemplo de construtor simples:
+
+```
+public class Conta {
+    // atributo
+    double saldo;
+
+    // construtor
+    public Conta() {
+        saldo = 100;
+        System.out.println("Criando uma instância de Conta...");
+    }
+}
+```
