@@ -66,3 +66,22 @@ public class Conta {
     }
 }
 ```
+
+No exemplo acima, a classe `Conta` define dois métodos chamados `retirar`, mas com assinaturas diferentes. Um método aceita apenas o valor a ser retirado, enquanto o outro também recebe o valor da taxa de retirada.
+
+A sobrecarga de métodos permite que um mesmo método se comporte de forma distinta, dependendo dos argumentos fornecidos. Quando um método é invocado em um objeto, o Java seleciona a versão adequada com base no nome do método e nos parâmetros fornecidos.
+
+Outro conceito relevante é o uso da palavra reservada `this`. Ela é utilizada para referenciar o próprio objeto, permitindo o acesso a seus atributos, métodos e construtores. Quando há duas variáveis com o mesmo nome — uma pertencente à instância da classe (atributo) e outra pertencente ao método — a palavra `this` é empregada para diferenciar o atributo da classe, como demonstrado no código a seguir:
+
+```
+public class Conta {
+    // atributo
+    double agencia;
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+}
+```
+
+Nesse exemplo, `this.agencia` faz referência ao atributo da classe, diferenciando-o da variável local `agencia` recebida como argumento no método `setAgencia`. Isso garante clareza e evita ambiguidades no código.
