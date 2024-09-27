@@ -1,10 +1,10 @@
 # 7. Arrays
 
-Um array é uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, que pode ser um tipo primitivo ou um objeto. Cada elemento dentro do array possui um índice numérico, utilizado para acessar e manipular os dados. O índice começa em 0, ou seja, o primeiro elemento do array é acessado com o índice 0, o segundo com o índice 1, e assim por diante. O comprimento do array é fixo, ou seja, uma vez definido, não pode ser alterado. O atributo `length` permite recuperar o tamanho do array, como ilustrado na Figura 7.1, que mostra um array com 10 posições e seus índices correspondentes.
+Um array é uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, que pode ser um tipo primitivo ou um objeto. Cada elemento dentro do array possui um índice numérico, utilizado para acessar e manipular os dados. O índice começa em 0, ou seja, o primeiro elemento do array é acessado com o índice 0, o segundo com o índice 1, e assim por diante. O comprimento do array é fixo, ou seja, uma vez definido, não pode ser alterado. O atributo `length` permite recuperar o tamanho do array, como ilustrado na Figura 16.1, que mostra um array com 10 posições e seus índices correspondentes.
 
 <div align="center">
     <img src="../imgs/array.png" width="50%"/>
-    <p>Figura 7.1: Array com 10 posições.</p>
+    <p>Figura 16.1: Array com 10 posições.</p>
 </div>
 
 Em Java, um array é um objeto e, portanto, pode-se utilizar o operador `new` para criar uma nova instância de um array. Para declarar uma variável que armazena um array, é necessário especificar o tipo do array, seguido de colchetes `[]` e o nome da variável. Exemplo:
@@ -155,11 +155,11 @@ carro.setModelo("Gol");
 carros[0] = carro;
 ```
 
-Assim, a posição 0 do array contém uma referência a um objeto `Carro`, enquanto as outras posições permanecem vazias (`null`). A figura 7.2 a seguir representa o estado atual do array de `carros`:
+Assim, a posição 0 do array contém uma referência a um objeto `Carro`, enquanto as outras posições permanecem vazias (`null`). A figura 16.2 a seguir representa o estado atual do array de `carros`:
 
 <div align="center">
     <img src="../imgs/array_carros.png" width="25%"/>
-    <p>Figura 7.2: Estado atual do array de carros.</p>
+    <p>Figura 16.2: Estado atual do array de carros.</p>
 </div>
 
 Para recuperar o valor do modelo do carro armazenado na primeira posição do vetor, utiliza-se o seguinte código:
