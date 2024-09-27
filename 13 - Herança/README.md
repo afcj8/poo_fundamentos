@@ -126,3 +126,19 @@ O cast força um objeto a ser tratado como outro tipo. Neste caso, o objeto `cc`
 ```
 ContaCorrente c2 = (ContaCorrente) conta; // Lançará ClassCastException
 ```
+
+Para evitar essa exceção, é possível verificar o tipo do objeto usando a instrução `instanceof`, que retorna `true` se o objeto à esquerda for do tipo especificado à direita:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        Conta cc = new Conta();
+
+        if (cc instanceof Conta) {
+            System.out.println("cc é do tipo Conta!");
+        } else {
+            System.out.println("cc não é do tipo Conta!");
+        }
+    }
+}
+```
