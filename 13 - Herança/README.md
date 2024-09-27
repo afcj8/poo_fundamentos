@@ -105,3 +105,24 @@ public class ContaCorrente extends Conta {
     }
 }
 ```
+
+O encapsulamento é utilizado para proteger tanto o atributo `tipo`, que especifica a categoria da conta corrente, quanto o atributo `chequeEspecial`, que representa o limite adicional de crédito disponível. O método `saldoDisponivel` retorna a soma do saldo da conta com o valor do cheque especial, indicando o total de recursos acessíveis ao titular da conta.
+
+As variáveis que armazenam referências a objetos são polimórficas, o que significa que uma variável de uma superclasse pode referenciar qualquer objeto de suas subclasses. Por exemplo:
+
+```
+Conta conta = new Conta();
+Conta cc = new ContaCorrente();
+```
+
+Para atribuir o objeto referenciado por `cc` a uma variável do tipo `ContaCorrente`, é necessário realizar um cast explícito:
+
+```
+ContaCorrente c1 = (ContaCorrente) cc;
+```
+
+O cast força um objeto a ser tratado como outro tipo. Neste caso, o objeto `cc` é forçado a ser do tipo `ContaCorrente`. Se o objeto não for compatível com o tipo ao qual está sendo forçado, será lançada a exceção `ClassCastException`:
+
+```
+ContaCorrente c2 = (ContaCorrente) conta; // Lançará ClassCastException
+```
