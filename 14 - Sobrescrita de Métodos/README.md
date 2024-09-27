@@ -52,3 +52,28 @@ public class ContaCorrente extends Conta {
 ```
 
 Os atributos e métodos foram omitidos para focar apenas nos construtores. Embora não estejam definidos, essas classes possuem um construtor padrão (sem argumentos) fornecido automaticamente pelo Java. O construtor padrão chama o construtor da superclasse direta; assim, o construtor da classe `ContaCorrente` invoca o construtor da classe `Conta`, e o construtor da classe `Conta` chama o construtor da classe `Object`.
+
+A seguir, é definido um construtor para a classe `ContaCorrente`, que recebe um parâmetro que representa o tipo de conta:
+
+```
+public class ContaCorrente extends Conta {
+    private String tipo;
+
+    public ContaCorrente(String tipo) {
+        this.tipo = tipo;
+    }
+}
+```
+
+Com a adição desse construtor, verifica-se que ele automaticamente chama o construtor da superclasse, o que torna a instrução `super()` na primeira linha do construtor redundante, já que o Java a incluirá caso nenhum construtor seja definido explicitamente.
+
+```
+public class ContaCorrente extends Conta {
+    private String tipo;
+
+    public ContaCorrente(String tipo) {
+        super();
+        this.tipo = tipo;
+    }
+}
+```
