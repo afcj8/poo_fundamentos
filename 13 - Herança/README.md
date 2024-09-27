@@ -76,3 +76,32 @@ public class Conta {
     }
 }
 ```
+
+A classe `ContaCorrente` possui dois atributos adicionais: o tipo de conta, que pode ser "básica", "especial" ou "premium", e o valor do cheque especial, que representa o limite de crédito adicional disponível ao cliente. Já a classe `ContaPoupanca` não apresenta essas distinções. Abaixo está a implementação inicial da classe `ContaCorrente`, que herda da classe `Conta`:
+
+```
+public class ContaCorrente extends Conta {
+    private String tipo;
+    private double chequeEspecial;
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setChequeEspecial(double chequeEspecial) {
+        this.chequeEspecial = chequeEspecial;
+    }
+
+    public double getChequeEspecial() {
+        return chequeEspecial;
+    }
+
+    public double saldoDisponivel() {
+        return getSaldo() + chequeEspecial;
+    }
+}
+```
