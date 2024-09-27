@@ -77,3 +77,37 @@ public class ContaCorrente extends Conta {
     }
 }
 ```
+
+Duas regras adicionais sobre construtores são as seguintes:
+
+1. Construtores não são herdados.
+2. A chamada ao construtor da superclasse deve ser sempre feita na primeira linha do construtor da subclasse.
+
+Caso seja implementado um construtor que recebe um parâmetro na classe `Conta`, a classe `ContaCorrente` não herdará esse construtor:
+
+```
+public class Conta {
+    private int numero;
+
+    public Conta(int numero) {
+        this.numero = numero;
+    }
+}
+```
+
+Após a definição desse construtor na classe `Conta`, a classe `ContaCorrente` apresentará um erro de compilação. Isso ocorre porque o construtor da classe `ContaCorrente` deve chamar o construtor da classe `Conta`, que agora possui apenas um construtor que recebe um parâmetro do tipo `int`.
+
+Para corrigir o erro, é necessário modificar o construtor da classe `ContaCorrente` para chamar o construtor definido na classe `Conta`, utilizando a instrução `super` e passando o parâmetro do tipo inteiro:
+
+```
+public class ContaCorrente extends Conta {
+    private String tipo;
+
+    public ContaCorrente(int numero, String tipo) {
+        super(numero);  // O construtor da subclasse chama o construtor da superclasse
+        this.tipo = tipo;
+    }
+}
+```
+
+Em resumo, caso a chamada ao construtor da superclasse (`super`) não seja feita de forma explícita, o compilador adicionará automaticamente uma chamada ao construtor padrão (`super()`). Se a superclasse não dispuser de um construtor padrão, ocorrerá um erro de compilação, tornando imprescindível a chamada explícita à instrução `super`, juntamente com os parâmetros necessários para o construtor da superclasse.
