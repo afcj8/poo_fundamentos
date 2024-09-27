@@ -13,7 +13,7 @@ Uma classe que não é abstrata é chamada de classe concreta. Ao projetar uma h
 
 Em classes concretas, não é permitido definir métodos abstratos. Se isso ocorrer, a classe deverá ser marcada como abstrata. Isso faz sentido, pois uma classe concreta com métodos não implementados seria impossível de instanciar de maneira funcional. Por essa razão, uma classe que contenha métodos abstratos deve ser definida como abstrata.
 
-É possível ter uma hierarquia de herança com várias classes abstratas. No entanto, a primeira classe concreta na hierarquia será obrigada a implementar todos os métodos abstratos definidos nas suas superclasses. A implementação de métodos abstratos na subclasse é semelhante à sobrescrita de métodos, exigindo que a subclasse defina um método com a mesma assinatura da superclasse e o implemente.
+É possível estabelecer uma hierarquia de classes com várias classes abstratas. No entanto, a primeira classe concreta na hierarquia será obrigada a implementar todos os métodos abstratos definidos nas suas superclasses. A implementação de métodos abstratos na subclasse é semelhante à sobrescrita de métodos, exigindo que a subclasse defina um método com a mesma assinatura da superclasse e o implemente.
 
 Para declarar uma classe ou método como abstrato, basta adicionar o modificador `abstract`. No exemplo abaixo, a classe `Conta` é definida como abstrata, e o método `verificarSaldo` é declarado como abstrato:
 
@@ -28,3 +28,15 @@ public abstract class Conta {
     public abstract double verificarSaldo();
 }
 ```
+
+No exemplo, o método `verificarSaldo` não possui implementação, e sua assinatura termina com ponto e vírgula. A seguir, a classe `ContaPoupanca`, que estende `Conta`, é implementada:
+
+```
+public class ContaPoupanca extends Conta {
+    public double verificarSaldo() {
+        return saldo;
+    }
+}
+```
+
+A classe `ContaPoupanca` deve implementar o método abstrato `verificarSaldo`, pois ela é uma classe concreta. No entanto, não é necessário implementar o método `sacar`, pois este já foi definido e implementado na superclasse `Conta`. Assim, `ContaPoupanca` herda o comportamento do método `sacar` da classe `Conta`, mas define seu próprio comportamento para o método `verificarSaldo`.
