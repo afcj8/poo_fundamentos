@@ -21,3 +21,58 @@ A palavra-chave `extends` é utilizada na declaração de uma classe para indica
 ```
 
 Dessa forma, a estrutura de herança em Java facilita a organização e reutilização de código, promovendo a especialização e a extensibilidade das classes.
+
+## 13.1. Prática
+
+Modifique a classe `Conta` para que ela tenha as subclasses `ContaCorrente` e `ContaPoupanca`. A classe `Conta` herda diretamente da classe `Object`.
+
+```
+public class Conta {
+    private int numero, agencia;
+    private double saldo;
+
+    public Conta() { }
+
+    public Conta(int numero, int agencia, double saldo) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.saldo = saldo;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public void retirar(double valor) {
+        saldo -= valor;
+    }
+
+    public double verificarSaldo() {
+        return getSaldo();
+    }
+}
+```
