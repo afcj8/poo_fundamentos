@@ -36,3 +36,19 @@ conta.retirar(100);
 ```
 
 Mesmo que a variável seja do tipo `Conta`, o método `retirar` chamado será o definido em `ContaCorrente`, pois a instância é do tipo `ContaCorrente`. Esse comportamento exemplifica o polimorfismo em ação, onde um objeto pode se comportar de maneira diferente dependendo de seu tipo real, mesmo que seja referenciado por um tipo genérico.
+
+## 14.1. Construtores em Classes Estendidas
+
+Os construtores das subclasses são obrigados a chamar um construtor da superclasse, utilizando a instrução `super`. Consideram-se as classes `Conta` e `ContaCorrente`:
+
+```
+public class Conta {
+
+}
+
+public class ContaCorrente extends Conta {
+
+}
+```
+
+Os atributos e métodos foram omitidos para focar apenas nos construtores. Embora não estejam definidos, essas classes possuem um construtor padrão (sem argumentos) fornecido automaticamente pelo Java. O construtor padrão chama o construtor da superclasse direta; assim, o construtor da classe `ContaCorrente` invoca o construtor da classe `Conta`, e o construtor da classe `Conta` chama o construtor da classe `Object`.
