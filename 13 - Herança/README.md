@@ -24,7 +24,7 @@ Dessa forma, a estrutura de herança em Java facilita a organização e reutiliz
 
 ## 13.1. Prática
 
-Modifique a classe `Conta` para que ela tenha as subclasses `ContaCorrente` e `ContaPoupanca`. A classe `Conta` herda diretamente da classe `Object`.
+Modifica-se a classe `Conta` para que ela tenha as subclasses `ContaCorrente` e `ContaPoupanca`. A classe `Conta` herda diretamente da classe `Object`.
 
 ```
 public class Conta {
@@ -127,7 +127,7 @@ O cast força um objeto a ser tratado como outro tipo. Neste caso, o objeto `cc`
 ContaCorrente c2 = (ContaCorrente) conta; // Lançará ClassCastException
 ```
 
-Para evitar essa exceção, é possível verificar o tipo do objeto usando a instrução `instanceof`, que retorna `true` se o objeto à esquerda for do tipo especificado à direita:
+Para evitar essa exceção, pode-se verificar o tipo do objeto utilizando a instrução `instanceof`, que retorna `true` se o objeto à esquerda for do tipo especificado à direita:
 
 ```
 public class Teste {
@@ -138,6 +138,38 @@ public class Teste {
             System.out.println("cc é do tipo Conta!");
         } else {
             System.out.println("cc não é do tipo Conta!");
+        }
+    }
+}
+```
+
+O resultado deste código será "cc é do tipo Conta!". Se a instância for alterada para `ContaCorrente`, o resultado permanecerá o mesmo, pois `ContaCorrente` é uma subclasse de `Conta`:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+
+        if (cc instanceof Conta) {
+            System.out.println("cc é do tipo Conta!");
+        } else {
+            System.out.println("cc não é do tipo Conta!");
+        }
+    }
+}
+```
+
+No entanto, ao testar se o objeto referenciado pela variável `cc` é do tipo `ContaCorrente`, o resultado da execução será "cc não é do tipo ContaCorrente!", já que uma instância de `Conta` não é, necessariamente, uma instância de `ContaCorrente`:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        Conta cc = new Conta();
+        
+        if (cc instanceof ContaCorrente) {
+            System.out.println("cc é do tipo ContaCorrente!");
+        } else {
+            System.out.println("cc não é do tipo ContaCorrente!");
         }
     }
 }
