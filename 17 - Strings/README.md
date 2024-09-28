@@ -27,3 +27,12 @@ String nome = "Antônio";
 ```
 
 Nesse último exemplo, a `String` é armazenada em um pool de strings, uma área de cache utilizada pelo Java.
+
+## 17.1. Atributos de Instância
+
+Se uma `String` for um atributo de instância (variável de classe), ela precisa ser inicializada antes de seu uso. A falta de inicialização atribui automaticamente o valor `null`. Tentar acessar métodos de uma `String` com valor `null` resultará em uma `NullPointerException`. Por exemplo, o código a seguir gera um erro ao tentar acessar o método `length()` em uma variável não inicializada:
+
+```
+String nome = null;
+System.out.println(nome.length());
+```
