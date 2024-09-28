@@ -36,3 +36,24 @@ Se uma `String` for um atributo de instância (variável de classe), ela precisa
 String nome = null;
 System.out.println(nome.length());
 ```
+
+Para evitar esse erro, a `String` deve ser inicializada antes do uso:
+
+```
+String nome = new String();
+System.out.println(nome.length());
+```
+
+Ou, com uma inicialização direta:
+
+```
+String nome = "Antônio";
+System.out.println(nome.length());
+```
+
+Quando uma variável é declarada dentro de um método, ela precisa ser inicializada antes de ser utilizada. Caso contrário, um erro de compilação será gerado:
+
+```
+String nome;
+System.out.println(nome.length());
+```
