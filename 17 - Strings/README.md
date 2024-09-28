@@ -57,3 +57,28 @@ Quando uma variável é declarada dentro de um método, ela precisa ser iniciali
 String nome;
 System.out.println(nome.length());
 ```
+
+## 17.2. Sequências de Escape
+
+Em Java, para imprimir ou armazenar certos caracteres especiais, como aspas duplas ou barras invertidas, utilizam-se sequências de escape, que são precedidas por uma contrabarra (`\`). A tabela a seguir mostra as sequências de escape mais comuns:
+
+| Escape | Descrição |
+| ------ | --------- |
+| \n     | Quebra de linha, posiciona o cursor no início da próxima linha. |
+| \t     | Tabulação horizontal, move o cursor para a próxima posição de tabulação. |
+| \\     | Barras invertidas, usada para gerar uma barra invertida (\). |
+| \"     | Aspas duplas, usada para gerar um caractere de aspas duplas ("). |
+| \'     | Aspas simples, usada para gerar um caractere de aspas simples ('). |
+
+Para utilizar uma sequência de escape, basta incluí-la dentro da string. O exemplo a seguir demonstra o uso da sequência `\n` para quebra de linha:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        String nome = "Antônio \nFernandes da Cruz Junior";
+        System.out.println(nome);
+    }
+}
+```
+
+Nesse exemplo, o nome completo é impresso com uma quebra de linha entre o primeiro nome e o sobrenome.
