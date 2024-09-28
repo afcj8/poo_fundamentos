@@ -69,3 +69,16 @@ Em Java, para imprimir ou armazenar certos caracteres especiais, como aspas dupl
 | \\     | Barras invertidas, usada para gerar uma barra invertida (\). |
 | \"     | Aspas duplas, usada para gerar um caractere de aspas duplas ("). |
 | \'     | Aspas simples, usada para gerar um caractere de aspas simples ('). |
+
+Para utilizar uma sequência de escape, basta incluí-la dentro da string. O exemplo a seguir demonstra o uso da sequência `\n` para quebra de linha:
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        String nome = "Antônio \nFernandes da Cruz Junior";
+        System.out.println(nome);
+    }
+}
+```
+
+Nesse exemplo, o nome completo é impresso com uma quebra de linha entre o primeiro nome e o sobrenome.
