@@ -7,3 +7,23 @@ Objetos `String` são imutáveis, ou seja, o conteúdo de caracteres não pode s
 ```
 String nome;
 ```
+
+Após a declaração, a `String` pode ser instanciada como qualquer outro objeto. A sintaxe para instanciá-la é:
+
+```
+String nome = new String();
+```
+
+Também é possível inicializá-la diretamente ao declarar:
+
+```
+String nome = new String("Antônio");
+```
+
+Ou, de maneira mais simplificada:
+
+```
+String nome = "Antônio";
+```
+
+Nesse último exemplo, a `String` é armazenada em um pool de strings, uma área de cache utilizada pelo Java.
