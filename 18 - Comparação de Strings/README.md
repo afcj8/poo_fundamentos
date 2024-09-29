@@ -22,3 +22,21 @@ public class Comparacao {
 ```
 
 Embora as variáveis `nome1` e `nome2` tenham o mesmo valor, elas estão alocadas em diferentes endereços de memória, resultando na mensagem "As Strings são diferentes!", já que o operador `==` está comparando os endereços de memória.
+
+No entanto, se as strings forem inicializadas sem instanciá-las explicitamente com o operador `new`, elas serão armazenadas no pool de strings. Neste caso, se os valores forem iguais, as strings compartilharão o mesmo espaço de memória, permitindo que o operador `==` funcione corretamente:
+
+```
+public class Comparacao {
+    public static void main(String[] args) {
+        String nome1 = "Antônio";
+        String nome2 = "Antônio";
+        if (nome1 == nome2) {
+            System.out.println("As Strings são iguais!");
+        } else {
+            System.out.println("As Strings são diferentes!");
+        }
+    }
+}
+```
+
+Neste exemplo, o resultado será "As Strings são iguais!", porque `nome1` e `nome2` estão compartilhando o mesmo endereço de memória no pool de strings.
