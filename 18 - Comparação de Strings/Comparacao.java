@@ -3,9 +3,12 @@ public class Comparacao {
         // String nome1 = new String("Antônio");
         // String nome2 = new String("Antônio");
 
+        // String nome1 = "Antônio";
+        // String nome2 = "Antônio";
+
         String nome1 = "Antônio";
-        String nome2 = "Antônio";
-        
+        String nome2 = new String("Antônio");
+
         if (nome1 == nome2) {
             System.out.println("As Strings são iguais!");
         } else {

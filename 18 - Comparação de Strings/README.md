@@ -40,3 +40,21 @@ public class Comparacao {
 ```
 
 Neste exemplo, o resultado será "As Strings são iguais!", porque `nome1` e `nome2` estão compartilhando o mesmo endereço de memória no pool de strings.
+
+Porém, se uma das variáveis for instanciada utilizando o operador `new`, o operador `==` não funcionará como esperado. O exemplo abaixo resulta em "As Strings são diferentes!":
+
+```
+public class Comparacao {
+    public static void main(String[] args) {
+        String nome1 = "Antônio";
+        String nome2 = new String("Antônio");
+        if (nome1 == nome2) {
+            System.out.println("As Strings são iguais!");
+        } else {
+            System.out.println("As Strings são diferentes!");
+        }
+    }
+}
+```
+
+Portanto, recomenda-se sempre utilizar os métodos `equals()` ou `equalsIgnoreCase()` para comparar strings, pois eles garantem a comparação correta, independentemente da forma como as variáveis foram inicializadas.
