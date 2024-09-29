@@ -94,3 +94,25 @@ public class MetodoEquals {
 ```
 
 Neste caso, se as strings forem diferentes, a mensagem "As Strings são diferentes!" será exibida.
+
+## 18.2. Método equalsIgnoreCase()
+
+O método `equalsIgnoreCase()` compara o conteúdo de duas strings sem diferenciar entre caracteres maiúsculos e minúsculos. Assim, a string "Antônio" é considerada igual à string "antônio". O exemplo a seguir ilustra a utilização desse método:
+
+```
+public class MetodoEqualsIgnoreCase {
+    public static void main(String[] args) {
+        String nome1 = "antônio";
+        String nome2 = new String("Antônio");
+        if (nome1.equalsIgnoreCase(nome2)) { 
+            System.out.println("As Strings são iguais!");
+        } else {
+            System.out.println("As Strings são diferentes!");
+        }
+    }
+}
+```
+
+No exemplo acima, o resultado será "As Strings são iguais!", uma vez que o método ignora a diferença entre maiúsculas e minúsculas.
+
+O operador de negação `!` também pode ser utilizado com o método `equalsIgnoreCase()` para verificar se as strings são diferentes, independentemente da capitalização dos caracteres.
