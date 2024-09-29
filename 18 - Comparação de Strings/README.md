@@ -94,3 +94,7 @@ public class MetodoEquals {
 ```
 
 Neste caso, se as strings forem diferentes, a mensagem "As Strings são diferentes!" será exibida.
+
+## 18.2. Método equalsIgnoreCase()
+
+O método `equalsIgnoreCase()` compara o conteúdo de duas strings sem diferenciar entre caracteres maiúsculos e minúsculos. Assim, a string "Antônio" é considerada igual à string "antônio".
