@@ -58,3 +58,21 @@ public class Comparacao {
 ```
 
 Portanto, recomenda-se sempre utilizar os métodos `equals()` ou `equalsIgnoreCase()` para comparar strings, pois eles garantem a comparação correta, independentemente da forma como as variáveis foram inicializadas.
+
+## 18.1. Método equals()
+
+O método `equals()` compara o conteúdo de duas strings, diferenciando letras maiúsculas de minúsculas. Assim, a string "Antônio" é considerada diferente de "antônio". No exemplo a seguir, o conteúdo das variáveis `nome1` e `nome2` é comparado, e a mensagem "As Strings são iguais!" será exibida no console, pois os valores são idênticos:
+
+```
+public class MetodoEquals {
+    public static void main(String[] args) {
+        String nome1 = "Antônio";
+        String nome2 = new String("Antônio");
+        if (nome1.equals(nome2)) {
+            System.out.println("As Strings são iguais!");
+        } else {
+            System.out.println("As Strings são diferentes!");
+        }
+    }
+}
+```
