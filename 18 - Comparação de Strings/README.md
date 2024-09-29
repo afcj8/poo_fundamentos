@@ -76,3 +76,21 @@ public class MetodoEquals {
     }
 }
 ```
+
+Para verificar se as strings são diferentes, é possível utilizar o operador de negação `!` junto ao método `equals()`. Dessa forma, a condição será invertida, verificando se as strings não são iguais. O exemplo abaixo ilustra essa abordagem:
+
+```
+public class MetodoEquals {
+    public static void main(String[] args) {
+        String nome1 = "Antônio";
+        String nome2 = new String("Antônio");
+        if (!nome1.equals(nome2)) { 
+            System.out.println("As Strings são diferentes!");
+        } else {
+            System.out.println("As Strings são iguais!");
+        }
+    }
+}
+```
+
+Neste caso, se as strings forem diferentes, a mensagem "As Strings são diferentes!" será exibida.
