@@ -122,4 +122,18 @@ Nesse caso, a posição retornada será o índice da última ocorrência do cara
 
 ## 19.7. Método substring
 
-O método `substring` permite criar uma nova string a partir de um trecho de uma string existente. Ele recebe como parâmetros a posição inicial (inclusiva) e a posição final (exclusiva) dos caracteres a serem copiados. O caractere na posição inicial é incluído na nova string, enquanto o caractere na posição final é excluído.
+O método `substring` permite criar uma nova string a partir de um trecho de uma string existente. Ele recebe como parâmetros a posição inicial (inclusiva) e a posição final (exclusiva) dos caracteres a serem copiados. O caractere na posição inicial é incluído na nova string, enquanto o caractere na posição final é excluído. No exemplo a seguir, o método cria uma nova string a partir do índice 8 até o 14:
+
+```
+public class MetodoSubstring {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        String nova = nome.substring(8, 14);
+        System.out.println("A nova String é: " + nova);
+    }
+}
+```
+
+No exemplo acima, o resultado será a string "Junior", correspondente aos caracteres da posição 8 até 14 da string original.
+
+O método `substring` também pode ser utilizado passando apenas a posição inicial, e, nesse caso, a nova string será formada a partir dessa posição até o final da string original.
