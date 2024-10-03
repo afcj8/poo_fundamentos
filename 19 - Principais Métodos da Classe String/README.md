@@ -104,6 +104,18 @@ public class MetodoIndexOf {
 
 No exemplo acima, a variável `indicePalavra` armazena o valor do índice referente ao início da palavra "Junior" na string "Antônio Junior". O resultado da execução será o índice onde a palavra começa: "O índice da palavra "Junior" é: 8".
 
-## 19.6. Método latsIndexOf
+## 19.6. Método lastIndexOf
 
-O método `lastIndexOf` da classe `String` é similar ao `indexOf`, mas em vez de retornar a posição da primeira ocorrência de um caractere ou palavra, ele retorna o índice da última ocorrência.
+O método `lastIndexOf` da classe `String` é similar ao `indexOf`, mas em vez de retornar a posição da primeira ocorrência de um caractere ou palavra, ele retorna o índice da última ocorrência. No exemplo a seguir, o método busca a última ocorrência do caractere 'o':
+
+```
+public class MetodoLastIndexOf {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        int indice = nome.lastIndexOf("o");
+        System.out.println("O índice do último caractere 'o' é: " + indice);
+    }
+}
+```
+
+Nesse caso, a posição retornada será o índice da última ocorrência do caractere 'o'. Para buscar uma palavra, basta passá-la como parâmetro, e o método retornará o índice da última ocorrência dessa sequência de caracteres.
