@@ -189,3 +189,19 @@ public class MetodoSplit {
 ```
 
 Nesse exemplo, a string armazenada na variável `nome` é dividida em várias palavras, separadas pelo espaço em branco. O resultado é armazenado em um array de strings, e um laço `for` percorre esse array, imprimindo cada elemento. Além do espaço em branco, é possível utilizar qualquer outro caractere ou sequência de caracteres como delimitador para separar a string.
+
+## 19.11. Método compareTo
+
+Os métodos `compareTo` e `compareToIgnoreCase` são utilizados para comparar duas strings. O método `compareTo` distingue entre letras maiúsculas e minúsculas, enquanto o `compareToIgnoreCase` ignora essas diferenças. Ambos retornam um valor numérico que indica a diferença entre as strings: um retorno igual a zero indica que as strings são consideradas iguais; um valor maior que zero significa que a primeira string é maior que a segunda; e um valor menor que zero indica que a primeira string é menor que a segunda. No exemplo abaixo, é realizada a comparação entre duas strings:
+
+```
+public class MetodoCompareTo { 
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        boolean comparacao = nome.compareTo("Antônio Junior") == 0;
+        System.out.println("As Strings são iguais? " + comparacao);
+    }
+}
+```
+
+Neste caso, o método `compareTo` compara a string nome com outra string idêntica. Como o retorno da comparação é zero, o resultado impresso será que as strings são iguais.
