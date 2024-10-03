@@ -39,3 +39,7 @@ public class MetodoEndsWith {
 ```
 
 No exemplo acima, o resultado será "A String termina com 'or'". Assim como o método `startsWith`, o `endsWith` também diferencia maiúsculas de minúsculas durante a comparação.
+
+## 19.3. Método length
+
+Assim como é possível recuperar o tamanho de um vetor, também é possível obter a quantidade de caracteres de uma string utilizando o método `length()`. No caso das strings, o `length` é um método e, portanto, deve ser chamado com parênteses.
