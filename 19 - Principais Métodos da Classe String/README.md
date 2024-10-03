@@ -119,3 +119,7 @@ public class MetodoLastIndexOf {
 ```
 
 Nesse caso, a posição retornada será o índice da última ocorrência do caractere 'o'. Para buscar uma palavra, basta passá-la como parâmetro, e o método retornará o índice da última ocorrência dessa sequência de caracteres.
+
+## 19.7. Método substring
+
+O método `substring` permite criar uma nova string a partir de um trecho de uma string existente. Ele recebe como parâmetros a posição inicial (inclusiva) e a posição final (exclusiva) dos caracteres a serem copiados. O caractere na posição inicial é incluído na nova string, enquanto o caractere na posição final é excluído.
