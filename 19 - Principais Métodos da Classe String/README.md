@@ -229,3 +229,7 @@ public class MetodoValueOf {
 ```
 
 Neste exemplo, o método `valueOf` é utilizado para converter um valor booleano, um número de ponto flutuante, um inteiro e um número longo em suas respectivas representações em string. Os resultados da conversão são impressos no console, demonstrando a versatilidade desse método para diferentes tipos de dados.
+
+## 19.13. Método trim
+
+O método `trim` é utilizado para remover espaços em branco no início e no final de uma string.
