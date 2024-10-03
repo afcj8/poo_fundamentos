@@ -59,3 +59,15 @@ O resultado da execução será: "A String possui 14 caracteres".
 ## 19.4. Método charAt
 
 Também é possível recuperar um caractere específico de uma string com base em sua posição. Essa funcionalidade é semelhante à de um vetor, onde se pode acessar um elemento pelo seu índice. Assim como em vetores, o primeiro caractere de uma string está na posição zero (0). O método utilizado para obter um caractere de uma string é o `charAt()`, que recebe como argumento a posição do caractere desejado.
+
+```
+public class MetodoCharAt {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        char caractere = nome.charAt(1);
+        System.out.println("O segundo caractere da String é: " + caractere);
+    }
+}
+```
+
+No exemplo acima, o segundo caractere da string (índice 1) é recuperado e impresso no console. O resultado será: "O segundo caractere da String é: n".
