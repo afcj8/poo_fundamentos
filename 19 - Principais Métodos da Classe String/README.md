@@ -43,3 +43,15 @@ No exemplo acima, o resultado será "A String termina com 'or'". Assim como o m�
 ## 19.3. Método length
 
 Assim como é possível recuperar o tamanho de um vetor, também é possível obter a quantidade de caracteres de uma string utilizando o método `length()`. No caso das strings, o `length` é um método e, portanto, deve ser chamado com parênteses.
+
+```
+public class MetodoLength {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        int caracteres = nome.length();
+        System.out.println("A String possui " + caracteres + " caracteres");
+    }
+}
+```
+
+O resultado da execução será: "A String possui 14 caracteres".
