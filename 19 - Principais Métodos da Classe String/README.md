@@ -103,3 +103,7 @@ public class MetodoIndexOf {
 ```
 
 No exemplo acima, a variável `indicePalavra` armazena o valor do índice referente ao início da palavra "Junior" na string "Antônio Junior". O resultado da execução será o índice onde a palavra começa: "O índice da palavra "Junior" é: 8".
+
+## 19.6. Método latsIndexOf
+
+O método `lastIndexOf` da classe `String` é similar ao `indexOf`, mas em vez de retornar a posição da primeira ocorrência de um caractere ou palavra, ele retorna o índice da última ocorrência.
