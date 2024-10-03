@@ -156,4 +156,18 @@ O resultado da execução será uma nova string com todos os caracteres converti
 
 ## 19.9. Método replace
 
-É possível substituir caracteres ou palavras em uma string utilizando o método `replace`. Esse método recebe como parâmetros o caractere ou palavra a ser substituído e o novo caractere ou palavra que irá substituí-los, criando uma nova string com a modificação.
+É possível substituir caracteres ou palavras em uma string utilizando o método `replace`. Esse método recebe como parâmetros o caractere ou palavra a ser substituído e o novo caractere ou palavra que irá substituí-los, criando uma nova string com a modificação. No exemplo a seguir, todos os caracteres 'n' são substituídos por 'x':
+
+```
+public class MetodoReplace {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        String nova = nome.replace('n', 'x');
+        System.out.println("A nova String é: " + nova);
+    }
+}
+```
+
+No exemplo acima, o caractere 'n' é substituído pelo caractere 'x', e o resultado é armazenado na variável `nova`. A string original, armazenada na variável `nome`, permanece inalterada.
+
+Além disso, também é possível substituir uma palavra inteira em uma string, seguindo a mesma lógica.
