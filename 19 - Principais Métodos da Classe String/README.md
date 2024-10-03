@@ -24,3 +24,18 @@ No exemplo acima, o resultado será "A String começa com Antônio". Por padrão
 ## 19.2. Método endsWith
 
 O método `endsWith` verifica se uma string termina com uma sequência específica de caracteres. Ele recebe como argumento a sequência a ser verificada.
+
+```
+public class MetodoEndsWith {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        if (nome.endsWith("or")) {
+            System.out.println("A String termina com 'or'");
+        } else {
+            System.out.println("A String não termina com 'or'");
+        }
+    }
+}
+```
+
+No exemplo acima, o resultado será "A String termina com 'or'". Assim como o método `startsWith`, o `endsWith` também diferencia maiúsculas de minúsculas durante a comparação.
