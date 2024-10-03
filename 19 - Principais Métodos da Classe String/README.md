@@ -205,3 +205,7 @@ public class MetodoCompareTo {
 ```
 
 Neste caso, o método `compareTo` compara a string nome com outra string idêntica. Como o retorno da comparação é zero, o resultado impresso será que as strings são iguais.
+
+## 19.12. Método valueOf
+
+O método `valueOf` é utilizado para converter diferentes tipos de dados, como booleano, inteiro, char, double, float, long, Object e etc, em strings.
