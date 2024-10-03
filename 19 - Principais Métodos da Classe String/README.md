@@ -174,4 +174,18 @@ Além disso, também é possível substituir uma palavra inteira em uma string, 
 
 ## 19.10. Método split
 
-O método `split` é uma ferramenta poderosa da classe `String` que permite dividir uma string em várias partes, com base em um delimitador especificado. Esse delimitador pode ser qualquer caractere ou sequência de caracteres.
+O método `split` é uma ferramenta poderosa da classe `String` que permite dividir uma string em várias partes, com base em um delimitador especificado. Esse delimitador pode ser qualquer caractere ou sequência de caracteres. No exemplo a seguir, o espaço em branco é utilizado como delimitador:
+
+```
+public class MetodoSplit {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        String[] palavras = nome.split(" ");
+        for (String p : palavras) {
+            System.out.println(p);
+        }
+    }
+}
+```
+
+Nesse exemplo, a string armazenada na variável `nome` é dividida em várias palavras, separadas pelo espaço em branco. O resultado é armazenado em um array de strings, e um laço `for` percorre esse array, imprimindo cada elemento. Além do espaço em branco, é possível utilizar qualquer outro caractere ou sequência de caracteres como delimitador para separar a string.
