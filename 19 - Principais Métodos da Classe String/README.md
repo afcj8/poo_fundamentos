@@ -229,3 +229,19 @@ public class MetodoValueOf {
 ```
 
 Neste exemplo, o método `valueOf` é utilizado para converter um valor booleano, um número de ponto flutuante, um inteiro e um número longo em suas respectivas representações em string. Os resultados da conversão são impressos no console, demonstrando a versatilidade desse método para diferentes tipos de dados.
+
+## 19.13. Método trim
+
+O método `trim` é utilizado para remover espaços em branco no início e no final de uma string. A seguir, apresenta-se um exemplo que ilustra essa funcionalidade:
+
+```
+public class MetodoTrim {
+    public static void main(String[] args) {
+        String nome = "  Antônio Junior  ";
+        String novo = nome.trim();
+        System.out.println("A nova String é: " + novo);
+    }
+}
+```
+
+No exemplo acima, a string armazenada na variável `nome` contém espaços em branco antes e depois do texto "Antônio Junior". Ao aplicar o método `trim`, uma nova string é criada, na qual esses espaços são removidos. O resultado é impresso no console, mostrando a string resultante sem os espaços adicionais.
