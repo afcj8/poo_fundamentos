@@ -89,3 +89,17 @@ public class MetodoIndexOf {
 Neste exemplo, o código busca a primeira ocorrência do caractere "t". O resultado da execução será: "O índice do caractere 't' é: 2", caso o caractere não seja encontrado na string, o método retornará -1.
 
 Lembre-se de que os índices em uma string começam em zero e que os espaços em branco também são contabilizados.
+
+O método `indexOf` também pode ser utilizado para procurar uma sequência de caracteres em uma string. Para isso, basta passar a palavra desejada em vez de um caractere individual.
+
+```
+public class MetodoIndexOf {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        int indicePalavra = nome.indexOf("Junior");
+        System.out.println("O índice da palavra \"Junior\" é: " + indicePalavra);
+    }
+}
+```
+
+No exemplo acima, a variável `indicePalavra` armazena o valor do índice referente ao início da palavra "Junior" na string "Antônio Junior". O resultado da execução será o índice onde a palavra começa: "O índice da palavra "Junior" é: 8".
