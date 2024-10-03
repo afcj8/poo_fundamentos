@@ -137,3 +137,19 @@ public class MetodoSubstring {
 No exemplo acima, o resultado será a string "Junior", correspondente aos caracteres da posição 8 até 14 da string original.
 
 O método `substring` também pode ser utilizado passando apenas a posição inicial, e, nesse caso, a nova string será formada a partir dessa posição até o final da string original.
+
+## 19.8. Métodos toUpperCase e toLowerCase
+
+É possível converter os caracteres de uma string para maiúsculas ou minúsculas utilizando os métodos `toUpperCase` e `toLowerCase` da classe `String`. O método `toUpperCase` transforma todos os caracteres em maiúsculas, enquanto o método `toLowerCase` converte para minúsculas. É importante lembrar que as strings em Java são imutáveis, ou seja, não podem ser alteradas. Dessa forma, ao utilizar esses métodos, uma nova string é criada com as alterações solicitadas. O exemplo abaixo demonstra a utilização do método `toUpperCase`:
+
+```
+public class MetodoToUpperCase {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        String nova = nome.toUpperCase();
+        System.out.println("A nova String é: " + nova);
+    }
+}
+```
+
+O resultado da execução será uma nova string com todos os caracteres convertidos para maiúsculas. O mesmo conceito se aplica ao método `toLowerCase`, que cria uma nova string com os caracteres em minúsculas, sem modificar a string original.
