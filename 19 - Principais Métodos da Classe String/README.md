@@ -189,3 +189,7 @@ public class MetodoSplit {
 ```
 
 Nesse exemplo, a string armazenada na variável `nome` é dividida em várias palavras, separadas pelo espaço em branco. O resultado é armazenado em um array de strings, e um laço `for` percorre esse array, imprimindo cada elemento. Além do espaço em branco, é possível utilizar qualquer outro caractere ou sequência de caracteres como delimitador para separar a string.
+
+## 19.11. Método compareTo
+
+Os métodos `compareTo` e `compareToIgnoreCase` são utilizados para comparar duas strings. O método `compareTo` distingue entre letras maiúsculas e minúsculas, enquanto o `compareToIgnoreCase` ignora essas diferenças. Ambos retornam um valor numérico que indica a diferença entre as strings, sendo que, se o valor retornado for igual a zero, as strings são consideradas iguais.
