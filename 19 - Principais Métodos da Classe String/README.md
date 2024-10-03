@@ -153,3 +153,7 @@ public class MetodoToUpperCase {
 ```
 
 O resultado da execução será uma nova string com todos os caracteres convertidos para maiúsculas. O mesmo conceito se aplica ao método `toLowerCase`, que cria uma nova string com os caracteres em minúsculas, sem modificar a string original.
+
+## 19.9. Método replace
+
+É possível substituir caracteres ou palavras em uma string utilizando o método `replace`. Esse método recebe como parâmetros o caractere ou palavra a ser substituído e o novo caractere ou palavra que irá substituí-los, criando uma nova string com a modificação.
