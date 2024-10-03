@@ -205,3 +205,27 @@ public class MetodoCompareTo {
 ```
 
 Neste caso, o método `compareTo` compara a string nome com outra string idêntica. Como o retorno da comparação é zero, o resultado impresso será que as strings são iguais.
+
+## 19.12. Método valueOf
+
+O método `valueOf` é utilizado para converter diferentes tipos de dados, como booleano, inteiro, caractere, ponto flutuante (double e float), e longo (long), em strings. A seguir, é apresentado um exemplo que demonstra essa funcionalidade:
+
+```
+public class MetodoValueOf { 
+    public static void main(String[] args) {
+        boolean bool = true;
+        System.out.println(String.valueOf(bool));
+
+        float f = 10.5f;
+        System.out.println(String.valueOf(f));
+
+        int i = 10;
+        System.out.println(String.valueOf(i));
+
+        long l = 1000;
+        System.out.println(String.valueOf(l));
+    }
+}
+```
+
+Neste exemplo, o método `valueOf` é utilizado para converter um valor booleano, um número de ponto flutuante, um inteiro e um número longo em suas respectivas representações em string. Os resultados da conversão são impressos no console, demonstrando a versatilidade desse método para diferentes tipos de dados.
