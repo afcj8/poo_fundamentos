@@ -171,3 +171,7 @@ public class MetodoReplace {
 No exemplo acima, o caractere 'n' é substituído pelo caractere 'x', e o resultado é armazenado na variável `nova`. A string original, armazenada na variável `nome`, permanece inalterada.
 
 Além disso, também é possível substituir uma palavra inteira em uma string, seguindo a mesma lógica.
+
+## 19.10. Método split
+
+O método `split` é uma ferramenta poderosa da classe `String` que permite dividir uma string em várias partes, com base em um delimitador especificado. Esse delimitador pode ser qualquer caractere ou sequência de caracteres.
