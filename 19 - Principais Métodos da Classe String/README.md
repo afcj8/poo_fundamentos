@@ -71,3 +71,7 @@ public class MetodoCharAt {
 ```
 
 No exemplo acima, o segundo caractere da string (índice 1) é recuperado e impresso no console. O resultado será: "O segundo caractere da String é: n".
+
+## 19.5. Método indexOf
+
+Outro método útil da classe String é o `indexOf()`. Ele permite localizar a primeira ocorrência de um caractere ou sequência de caracteres em uma string. Se o caractere ou palavra for encontrado, o método retorna a posição (índice) da primeira ocorrência. Caso contrário, o valor -1 é retornado, indicando que a string não contém o valor procurado.
