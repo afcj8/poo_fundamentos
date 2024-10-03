@@ -20,3 +20,7 @@ public class MetodoStartsWith {
 ```
 
 No exemplo acima, o resultado será "A String começa com Antônio". Por padrão, o Java diferencia maiúsculas e minúsculas ao comparar strings. Apenas métodos como `equalsIgnoreCase` ignoram essa distinção, enquanto métodos como `startsWith` consideram as diferenças entre letras maiúsculas e minúsculas.
+
+## 19.2. Método endsWith
+
+O método `endsWith` verifica se uma string termina com uma sequência específica de caracteres. Ele recebe como argumento a sequência a ser verificada.
