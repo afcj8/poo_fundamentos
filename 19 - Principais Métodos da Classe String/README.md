@@ -74,4 +74,18 @@ No exemplo acima, o segundo caractere da string (índice 1) é recuperado e impr
 
 ## 19.5. Método indexOf
 
-Outro método útil da classe String é o `indexOf()`. Ele permite localizar a primeira ocorrência de um caractere ou sequência de caracteres em uma string. Se o caractere ou palavra for encontrado, o método retorna a posição (índice) da primeira ocorrência. Caso contrário, o valor -1 é retornado, indicando que a string não contém o valor procurado.
+Outro método útil da classe String é o `indexOf()`. Ele permite localizar a primeira ocorrência de um caractere ou sequência de caracteres em uma string. Se o caractere ou palavra for encontrado, o método retorna a posição (índice) da primeira ocorrência. Caso contrário, o valor -1 é retornado, indicando que a string não contém o valor procurado. No exemplo abaixo:
+
+```
+public class MetodoIndexOf {
+    public static void main(String[] args) {
+        String nome = "Antônio Junior";
+        int indice  = nome.indexOf("t");
+        System.out.println("O índice do caractere 't' é: " + indice);
+    }
+}
+```
+
+Neste exemplo, o código busca a primeira ocorrência do caractere "t". O resultado da execução será: "O índice do caractere 't' é: 2", caso o caractere não seja encontrado na string, o método retornará -1.
+
+Lembre-se de que os índices em uma string começam em zero e que os espaços em branco também são contabilizados.
