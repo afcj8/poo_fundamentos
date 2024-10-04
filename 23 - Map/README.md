@@ -16,3 +16,20 @@ Um mapa é composto por pares de chave e valor, onde as chaves são únicas, mas
 | remove        | Remove um mapeamento.                              |
 | size          | Retorna o número de mapeamentos.                   |
 | values        | Retorna uma coleção com todos os valores.          |
+
+O método `put` é utilizado para adicionar elementos a um mapa, recebendo como parâmetros a chave e o valor. Abaixo está um exemplo de uso:
+
+```
+import java.util.HashMap;
+
+public class ExemploHashMap {
+    public static void main(String[] args) {
+        HashMap<String, String> mapa = new HashMap<>();
+        mapa.put("RM1234", "Antônio");
+        mapa.put("RM4321", "José");
+        System.out.println(mapa);
+    }
+}
+```
+
+Nesse exemplo, o mapa armazena os pares RM e nome do aluno, onde o RM é a chave e o nome é o valor. O resultado da execução será: {RM4321=José, RM1234=Antônio}.
