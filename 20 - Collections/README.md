@@ -12,3 +12,7 @@ As principais subinterfaces de `Collection` incluem:
 
 - **List:** Representa uma lista de objetos. A implementação mais comum é o `ArrayList`.
 - **Set:** Representa um conjunto de objetos únicos, ou seja, objetos que não se repetem. A implementação mais utilizada é o `HashSet`.
+
+A interface `Map`, por outro lado, representa uma estrutura que armazena pares de chave e valor, facilitando a recuperação de valores a partir de uma chave. A principal subinterface é:
+
+- **SortedMap:** Representa um mapa ordenado. A implementação mais comum é o `HashMap`.
