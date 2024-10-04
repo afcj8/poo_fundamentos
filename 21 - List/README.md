@@ -33,3 +33,7 @@ public class ExemploArrayList {
 ```
 
 No exemplo acima, um `ArrayList` chamado `lista` é criado, e o método `add` é utilizado para inserir objetos ao final da lista. O resultado da execução do programa é: [Java, Python, C#].
+
+## 21.1. Método set
+
+O método `set` da classe `ArrayList` é utilizado para substituir um elemento em uma posição específica da lista. Quando necessário inserir um novo elemento em uma posição já ocupada, o método `set` permite que o novo valor substitua o elemento existente. Por exemplo, ao inserir um valor na primeira posição (índice 0), o elemento anterior é removido, e o novo valor ocupa seu lugar.
