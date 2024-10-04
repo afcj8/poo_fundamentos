@@ -119,4 +119,23 @@ No exemplo, o método `size()` retorna a quantidade de elementos na lista, enqua
 
 ## 21.5. Método indexOf
 
-Para buscar um valor em um `ArrayList`, pode-se utilizar os métodos `indexOf` ou `lastIndexOf`, que funcionam de maneira semelhante aos métodos da classe `String`.
+Para buscar um valor em um `ArrayList`, pode-se utilizar os métodos `indexOf` ou `lastIndexOf`, que funcionam de maneira semelhante aos métodos da classe `String`. Como uma lista pode conter elementos duplicados, o método `indexOf` retorna o índice da primeira ocorrência do valor na lista:
+
+```
+import java.util.ArrayList;
+
+public class MetodoIndexOf {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.add("C#");
+        int indice = lista.indexOf("Java");
+        System.out.println("O valor 'Java' está na posição: " + indice);
+    }
+}
+```
+
+O resultado da execução será: "O valor 'Java' está na posição: 0".
+
+O método `lastIndexOf` opera de maneira semelhante, mas retorna o índice da última ocorrência do elemento na lista. Ambos os métodos retornam o valor -1 caso o elemento não seja encontrado.
