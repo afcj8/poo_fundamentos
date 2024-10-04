@@ -94,3 +94,7 @@ public class MetodoGet {
 ```
 
 No exemplo, três elementos são adicionados à lista. O método `get` é utilizado para obter o elemento na posição 2, que é "C#". Esse valor será impresso no console.
+
+## 21.4. Percorrer
+
+Uma lista pode ser percorrida de maneira semelhante a um array.
