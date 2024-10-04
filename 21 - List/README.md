@@ -13,3 +13,23 @@ A interface `List` define as funcionalidades que as classes concretas devem impl
 | indexOf     | Retorna a posição de um objeto na lista.                |
 | lastIndexOf | Retorna a última posição de um objeto na lista.         |
 | sublist     | Retorna uma sublista a partir da lista original.        |
+
+O `ArrayList` armazena seus elementos em um array interno, que cresce ou diminui dinamicamente conforme novos elementos são inseridos ou removidos. Embora o nome sugira uma relação direta com arrays, o `ArrayList` é uma implementação da interface `List` na API de coleções do Java e não permite acesso direto ao array interno, já que esse é encapsulado.
+
+Para criar um `ArrayList`, basta utilizar seu construtor e importar a classe `ArrayList`, conforme o exemplo a seguir:
+
+```
+import java.util.ArrayList;
+
+public class ExemploArrayList {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.add("C#");
+        System.out.println(lista);
+    }
+}
+```
+
+No exemplo acima, um `ArrayList` chamado `lista` é criado, e o método `add` é utilizado para inserir objetos ao final da lista. O resultado da execução do programa é: [Java, Python, C#].
