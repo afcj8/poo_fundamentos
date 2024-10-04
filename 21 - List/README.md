@@ -116,3 +116,7 @@ public class Percorrer {
 ```
 
 No exemplo, o método `size()` retorna a quantidade de elementos na lista, enquanto o laço `for` itera sobre cada posição da lista. O resultado da execução será a impressão dos valores "Java", "Python" e "C#".
+
+## 21.5. Método indexOf
+
+Para buscar um valor em um `ArrayList`, pode-se utilizar os métodos `indexOf` ou `lastIndexOf`, que funcionam de maneira semelhante aos métodos da classe `String`.
