@@ -53,3 +53,7 @@ public class MetodoSet {
 ```
 
 No exemplo, após a execução, a lista contém dois elementos: "Java" na posição 0 e "C#" na posição 1, substituindo o valor "Python" que anteriormente ocupava essa posição.
+
+## 21.2. Método remove
+
+Para remover um elemento de uma lista, utiliza-se o método `remove`, que recebe como parâmetro a posição do elemento a ser excluído.
