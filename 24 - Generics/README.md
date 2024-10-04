@@ -32,3 +32,12 @@ public class ExemploGenerics {
 ```
 
 Neste exemplo, utiliza-se o laço `for-each` para percorrer a lista e imprimir cada objeto do tipo `Conta` no console. A vantagem de utilizar Generics é que não há necessidade de realizar o cast ao recuperar objetos da lista, pois o tipo é previamente definido.
+
+Toda a API de coleções do Java suporta o uso de Generics, o que aumenta a segurança na manipulação dos tipos e elimina a necessidade de conversões. É importante observar que Generics só podem ser utilizados com tipos de objeto, e não com tipos primitivos. Abaixo, outros exemplos de uso de Generics com coleções:
+
+```
+HashSet<Cliente> clientes = new HashSet<Cliente>();
+HashMap<String, Cliente> mapa = new HashMap<String, Cliente>();
+```
+
+No exemplo acima, apenas objetos do tipo `Cliente` podem ser armazenados no `HashSet`, e no `HashMap`, a chave é uma `String` e o valor um objeto `Cliente`. O uso de Generics em coleções é recomendado para garantir maior segurança e evitar erros em tempo de execução.
