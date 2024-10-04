@@ -1,0 +1,3 @@
+# 24. Generics
+
+Até o momento, foi possível armazenar qualquer tipo de objeto em coleções, permitindo a mistura de diferentes tipos, como `String`, `int`, `double`, entre outros. No entanto, a partir do Java 5, introduziu-se o recurso de Generics, que permite restringir os tipos de dados aceitos em uma coleção. Dessa forma, apenas o tipo determinado no Generic poderá ser inserido na lista, garantindo mais segurança e clareza no código.
