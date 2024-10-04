@@ -74,3 +74,7 @@ public class MetodoRemove {
 ```
 
 No exemplo, três elementos são adicionados à lista. Em seguida, o método `remove` é utilizado para excluir o elemento na posição 0. Após a remoção, a lista contém os valores "Python" e "C#".
+
+## 21.3. Método get
+
+O método `get` permite recuperar um elemento de uma lista com base em sua posição.
