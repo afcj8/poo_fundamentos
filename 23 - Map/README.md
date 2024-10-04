@@ -33,3 +33,29 @@ public class ExemploHashMap {
 ```
 
 Nesse exemplo, o mapa armazena os pares RM e nome do aluno, onde o RM é a chave e o nome é o valor. O resultado da execução será: {RM4321=José, RM1234=Antônio}.
+
+Para recuperar um valor do mapa, utiliza-se o método `get`, passando a chave correspondente:
+
+```
+System.out.println(mapa.get("RM1234"));
+```
+
+Esse código imprimirá "Antônio" no console.
+
+O método `remove` é utilizado para excluir um mapeamento do mapa, como mostrado no exemplo a seguir:
+
+```
+import java.util.HashMap;
+
+public class HashMapRemove {
+    public static void main(String[] args) {
+       HashMap<String, String> mapa = new HashMap<>();
+        mapa.put("RM1234", "Antônio");
+        mapa.put("RM4321", "José");
+        mapa.remove("RM4321");
+        System.out.println(mapa);
+    }
+}
+```
+
+Após a remoção do elemento com a chave "RM4321", o mapa conterá apenas {RM1234=Antônio}. Se tentar recuperar o valor associado à chave removida, o método `get` retornará `null`.
