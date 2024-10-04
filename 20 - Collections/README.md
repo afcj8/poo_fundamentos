@@ -1,0 +1,5 @@
+# 20. Collections
+
+Em Java, arrays podem ser utilizados para armazenar elementos do mesmo tipo. No entanto, sua manipulação pode ser trabalhosa, pois o tamanho de um array é fixo. Caso seja necessário armazenar mais elementos do que o tamanho inicialmente definido, é preciso criar um novo array e transferir os dados do array antigo para o novo. Além disso, encontrar um elemento pelo seu valor exige percorrer todo o array, pois a busca direta é possível apenas através do índice.
+
+Ao criar um array, define-se seu tamanho total, mas não há uma forma simples de verificar quantas posições estão preenchidas. Para encontrar uma posição vazia e armazenar um novo elemento, o array precisa ser percorrido. Caso não haja mais espaços disponíveis, será necessário criar um novo array, repetindo o processo de transferência dos dados.
