@@ -36,4 +36,20 @@ No exemplo acima, um `ArrayList` chamado `lista` é criado, e o método `add` é
 
 ## 21.1. Método set
 
-O método `set` da classe `ArrayList` é utilizado para substituir um elemento em uma posição específica da lista. Quando necessário inserir um novo elemento em uma posição já ocupada, o método `set` permite que o novo valor substitua o elemento existente. Por exemplo, ao inserir um valor na primeira posição (índice 0), o elemento anterior é removido, e o novo valor ocupa seu lugar.
+O método `set` da classe `ArrayList` é utilizado para substituir um elemento em uma posição específica da lista. Quando necessário inserir um novo elemento em uma posição já ocupada, o método `set` permite que o novo valor substitua o elemento existente. Por exemplo, ao inserir um valor na primeira posição (índice 0), o elemento anterior é removido, e o novo valor ocupa seu lugar. O exemplo abaixo demonstra a utilização desse método:
+
+```
+import java.util.ArrayList;
+
+public class MetodoSet {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.set(1, "C#");
+        System.out.println(lista);
+    }
+}
+```
+
+No exemplo, após a execução, a lista contém dois elementos: "Java" na posição 0 e "C#" na posição 1, substituindo o valor "Python" que anteriormente ocupava essa posição.
