@@ -97,4 +97,22 @@ No exemplo, três elementos são adicionados à lista. O método `get` é utiliz
 
 ## 21.4. Percorrer
 
-Uma lista pode ser percorrida de maneira semelhante a um array.
+Uma lista pode ser percorrida de maneira semelhante a um array. No exemplo a seguir, percorre-se a lista e imprime-se o valor de cada elemento:
+
+```
+import java.util.ArrayList;
+
+public class Percorrer {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.add("C#");
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(lista.get(i));
+        }
+    }
+}
+```
+
+No exemplo, o método `size()` retorna a quantidade de elementos na lista, enquanto o laço `for` itera sobre cada posição da lista. O resultado da execução será a impressão dos valores "Java", "Python" e "C#".
