@@ -16,3 +16,15 @@ As principais subinterfaces de `Collection` incluem:
 A interface `Map`, por outro lado, representa uma estrutura que armazena pares de chave e valor, facilitando a recuperação de valores a partir de uma chave. A principal subinterface é:
 
 - **SortedMap:** Representa um mapa ordenado. A implementação mais comum é o `HashMap`.
+
+A interface `Collection` serve como base para todas as coleções (exceto mapas) e define métodos comuns às suas subinterfaces, como `List`, `Set` e `Queue`. Os principais métodos da interface `Collection` incluem:
+
+- **add:** Adiciona um objeto à coleção.
+- **clear:** Remove todos os objetos da coleção.
+- **contains:** Verifica se a coleção contém um determinado objeto.
+- **isEmpty:** Verifica se a coleção está vazia.
+- **remove:** Remove um objeto da coleção.
+- **size:** Retorna a quantidade de objetos na coleção.
+- **toArray:** Retorna um array contendo os elementos da coleção.
+
+O Collections Framework torna o armazenamento e a manipulação de dados em Java mais eficiente, superando as limitações dos arrays convencionais.
