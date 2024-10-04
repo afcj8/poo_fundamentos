@@ -1,0 +1,3 @@
+# 23. Map
+
+Mapas são estruturas úteis quando se deseja armazenar informações de forma que possam ser recuperadas rapidamente por meio de uma chave. Um exemplo seria armazenar objetos da classe Aluno em um mapa, utilizando o RM como chave. Assim, ao fornecer o RM, é possível recuperar todas as informações do aluno associado. Embora listas possam ser usadas para esse propósito, seria necessário percorrer todos os elementos para encontrar o aluno correto, o que comprometeria a performance, mesmo em listas pequenas.
