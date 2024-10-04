@@ -56,4 +56,21 @@ No exemplo, após a execução, a lista contém dois elementos: "Java" na posiç
 
 ## 21.2. Método remove
 
-Para remover um elemento de uma lista, utiliza-se o método `remove`, que recebe como parâmetro a posição do elemento a ser excluído.
+Para remover um elemento de uma lista, utiliza-se o método `remove`, que recebe como parâmetro a posição do elemento a ser excluído. Abaixo está um exemplo de uso:
+
+```
+import java.util.ArrayList;
+
+public class MetodoRemove {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.add("C#");
+        lista.remove(0);
+        System.out.println(lista);
+    }
+}
+```
+
+No exemplo, três elementos são adicionados à lista. Em seguida, o método `remove` é utilizado para excluir o elemento na posição 0. Após a remoção, a lista contém os valores "Python" e "C#".
