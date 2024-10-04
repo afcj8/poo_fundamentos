@@ -7,3 +7,8 @@ Ao criar um array, define-se seu tamanho total, mas não há uma forma simples d
 Devido a essas limitações, a plataforma Java oferece o Collections Framework, um conjunto de classes e interfaces que representam estruturas de dados mais avançadas e flexíveis. Coleções são utilizadas para armazenar e organizar objetos de maneira eficiente, permitindo a implementação de estruturas como listas, pilhas, filas, conjuntos, mapas e outras. Elas são amplamente utilizadas em aplicações Java, especialmente para manipular dados resultantes de consultas a bancos de dados.
 
 As coleções são definidas por meio de interfaces, que especificam as funcionalidades que devem ser implementadas por classes concretas. Em Java, as coleções podem ser divididas em duas categorias principais: aquelas que implementam a interface `Collection` e aquelas que implementam a interface `Map`.
+
+As principais subinterfaces de `Collection` incluem:
+
+- **List:** Representa uma lista de objetos. A implementação mais comum é o `ArrayList`.
+- **Set:** Representa um conjunto de objetos únicos, ou seja, objetos que não se repetem. A implementação mais utilizada é o `HashSet`.
