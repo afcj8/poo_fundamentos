@@ -77,4 +77,20 @@ No exemplo, três elementos são adicionados à lista. Em seguida, o método `re
 
 ## 21.3. Método get
 
-O método `get` permite recuperar um elemento de uma lista com base em sua posição.
+O método `get` permite recuperar um elemento de uma lista com base em sua posição. Abaixo está um exemplo de uso:
+
+```
+import java.util.ArrayList;
+
+public class MetodoGet {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Java");
+        lista.add("Python");
+        lista.add("C#");
+        System.out.println(lista.get(2));
+    }
+}
+```
+
+No exemplo, três elementos são adicionados à lista. O método `get` é utilizado para obter o elemento na posição 2, que é "C#". Esse valor será impresso no console.
