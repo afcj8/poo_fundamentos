@@ -27,3 +27,13 @@ No Java, as exceções são representadas como objetos da classe `Exception`. Es
 - **Checked:** Exceções que devem ser obrigatoriamente tratadas ou relançadas pelo desenvolvedor. Elas herdam da classe `Exception`.
 - **Unchecked:** Exceções opcionais de serem tratadas. Geralmente são causadas por erros no código. Se não forem tratadas, são automaticamente relançadas. Essas exceções herdam de `RuntimeException`.
 - **Error:** Erros críticos que indicam problemas graves, sendo geralmente irreparáveis em tempo de execução. Esses erros são lançados pela JVM e indicam que o programa não pode continuar.
+
+A tabela abaixo ilustra exemplos dessas classificações:
+
+| Classe | Objetivo | Exemplo |
+| ------ | -------- | ------- |
+| Error  | Erro que não pode ser tratado na aplicação, indicando que o programa não pode continuar. | `OutOfMemoryError`: indica que não há memória suficiente para continuar a execução do programa. |
+| Exception | Exceção que deve ser tratada pelo desenvolvedor. | `ArithmeticException`: ocorre em operações aritméticas inválidas, como a divisão por zero. |
+| RuntimeException | Exceção que pode ser tratada, porém não é obrigatória. | `NullPointerException`: ocorre ao tentar acessar métodos ou atributos de um objeto não instanciado. |
+
+Por meio do tratamento de exceções, é possível manter a estabilidade do programa e gerenciar erros de forma segura e controlada.
