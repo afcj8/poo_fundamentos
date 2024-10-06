@@ -41,3 +41,4 @@ Por meio do tratamento de exceções, é possível manter a estabilidade do prog
 Além das exceções fornecidas pela plataforma Java, é possível criar exceções personalizadas. Estas podem ser checked (filhas de `Exception`) ou unchecked (filhas de `RuntimeException`). A seguir, são descritas algumas das exceções mais comuns na plataforma Java:
 
 - **ArithmeticException:** Uma exceção unchecked que ocorre quando há uma operação aritmética inválida, como uma divisão por zero. Esse tipo de erro é detectado em tempo de execução e não precisa ser obrigatoriamente tratado.
+- **ArrayIndexOutOfBoundsException:** Também unchecked, essa exceção acontece ao tentar acessar uma posição inexistente em um array. A posição inválida pode ser negativa ou superior ao tamanho do array (o índice máximo é sempre o tamanho do array menos um). Como é unchecked, o tratamento dessa exceção é opcional.
