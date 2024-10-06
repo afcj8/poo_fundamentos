@@ -77,3 +77,26 @@ public class DivisaoTryCatch {
 Nesse exemplo, um bloco `try-catch` foi adicionado para capturar a `ArithmeticException` caso o divisor seja zero. Assim, ao invés de o programa ser interrompido, o fluxo de execução é redirecionado para o bloco `catch`, onde uma mensagem de erro é exibida. Se o divisor for zero, o resultado será "Erro ao dividir", e o bloco que imprime o resultado da divisão não será executado. Se o programa for executado sem que ocorra uma exceção, o resultado é exibido e o bloco `catch` é ignorado.
 
 O bloco `catch` recupera a exceção gerada por meio do parâmetro, que, no exemplo acima, é identificado como `e`. Isso permite acessar detalhes específicos sobre a exceção e tratá-la de forma adequada.
+
+A classe `Throwable` fornece métodos úteis para exibir informações sobre erros gerados. Por herança, a exceção `ArithmeticException` também possui esses métodos:
+
+- `printStackTrace()`: imprime a pilha de execução que mostra onde a exceção foi gerada, incluindo o número da linha e a classe.
+- `getMessage()`: retorna uma mensagem descritiva do erro ocorrido.
+
+A seguir, é mostrado um exemplo de uso desses métodos para capturar e exibir detalhes de uma `ArrayIndexOutOfBoundsException`:
+
+```
+public class ExemploStackTrace {
+    public static void main(String[] args) {
+        int[] array = new int[2];
+        try {
+            array[2] = 10;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.err.println("Mensagem de erro: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+Nesse exemplo, a exceção ocorre ao acessar uma posição inválida no array. No bloco `catch`, são utilizados os métodos `getMessage()` e `printStackTrace()` para exibir o erro.
