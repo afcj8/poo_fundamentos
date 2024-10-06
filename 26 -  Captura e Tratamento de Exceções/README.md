@@ -119,3 +119,41 @@ try {
     // código que sempre será executado
 }
 ```
+
+Um exemplo comum de uso do `finally` é o fechamento de conexões com banco de dados, garantindo que elas sejam encerradas mesmo se ocorrer um erro.
+
+Aplicando `finally` ao exemplo da divisão, incluindo tratamento para divisão por zero e entradas inválidas, o código ficaria assim:
+
+```
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class DivisaoTryCatchFinally {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.print("Digite o primeiro número: ");
+            int n1 = sc.nextInt();
+            System.out.print("Digite o segundo número: ");
+            int n2 = sc.nextInt();
+            int divisao = n1 / n2;
+            System.out.println("O resultado é: " + divisao);
+        } catch (ArithmeticException e) {
+            System.err.println("Erro ao dividir");
+        } catch (InputMismatchException e) {
+            System.err.println("Erro de entrada de dados");
+        } finally {
+            System.out.println("Finalizando a execução do programa!");
+            sc.close();
+        }
+    }
+}
+```
+
+O código tem três possíveis fluxos de execução:
+
+1. Sem exceções: a divisão é exibida.
+2. Divisão por zero: exibe "Erro ao dividir".
+3. Entrada inválida: exibe "Erro de entrada de dados".
+
+Em todos os casos, o bloco `finally` é executado, garantindo o fechamento do `Scanner`.
