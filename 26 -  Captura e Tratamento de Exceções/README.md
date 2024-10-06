@@ -100,3 +100,22 @@ public class ExemploStackTrace {
 ```
 
 Nesse exemplo, a exceção ocorre ao acessar uma posição inválida no array. No bloco `catch`, são utilizados os métodos `getMessage()` e `printStackTrace()` para exibir o erro.
+
+O `System.err` é utilizado para exibir mensagens de erro, que normalmente aparecem em vermelho no console, diferenciando-se das mensagens do `System.out`. Além disso, o fluxo de saída de erros pode ser redirecionado para um arquivo de log, enquanto o `System.out` é, por padrão, exibido na tela.
+
+Além do bloco `try-catch`, existe o bloco `try-catch-finally`. O bloco `finally`, que é opcional, executa independentemente de ocorrer ou não uma exceção. Seu uso é adequado para códigos que devem ser executados após a tentativa, como fechamento de recursos.
+
+- Se uma exceção for lançada: o fluxo segue para o bloco `catch` e, em seguida, o `finally` é executado.
+- Sem exceções: o bloco `try` é concluído, seguido pela execução do `finally`.
+
+Exemplo da estrutura com `finally`:
+
+```
+try {
+    // código que pode gerar uma exceção
+} catch (Exception e) {
+    // tratamento da exceção
+} finally {
+    // código que sempre será executado
+}
+```
