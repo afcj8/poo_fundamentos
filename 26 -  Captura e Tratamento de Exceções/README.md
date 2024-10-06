@@ -31,3 +31,22 @@ try {
 Nesse formato, apenas o primeiro `catch` compatível com o tipo de exceção lançada será executado. A ordem dos blocos `catch` é importante, pois o tratamento é feito de cima para baixo. Por isso, exceções mais específicas devem ser capturadas antes das mais genéricas.
 
 A classe `Exception` é a exceção mais abrangente no Java, pois todas as outras exceções derivam dela. Portanto, a captura de `Exception` deve sempre ser colocada no último bloco `catch`, garantindo que exceções mais específicas sejam tratadas adequadamente antes dela.
+
+Se nenhum bloco `catch` conseguir capturar a exceção lançada, o erro não será tratado, resultando na interrupção do programa como se não houvesse um bloco `try-catch`. Segue um exemplo que realiza a divisão de dois números inteiros:
+
+```
+import java.util.Scanner;
+
+public class Divisao {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro número: ");
+        int n1 = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int n2 = sc.nextInt();
+        int divisao = n1 / n2;
+        System.out.println("O resultado é: " + divisao);
+        sc.close();
+    }
+}
+```
