@@ -44,3 +44,6 @@ Além das exceções fornecidas pela plataforma Java, é possível criar exceç�
 - **ArrayIndexOutOfBoundsException:** Também unchecked, essa exceção acontece ao tentar acessar uma posição inexistente em um array. A posição inválida pode ser negativa ou superior ao tamanho do array (o índice máximo é sempre o tamanho do array menos um). Como é unchecked, o tratamento dessa exceção é opcional.
 - **NullPointerException:** Uma das exceções mais comuns e também unchecked, ocorre ao tentar acessar um método ou atributo de um objeto que não foi instanciado. Por exemplo, ao chamar `size()` em um objeto `ArrayList` que é `null`.
 - **FileNotFoundException:** Diferente das anteriores, esta é uma exceção checked, ou seja, deve ser tratada. Ela ocorre ao tentar acessar um arquivo que não existe no caminho especificado.
+- **NumberFormatException:** Exceção unchecked que surge quando uma tentativa de conversão de uma `String` para um tipo numérico falha, geralmente devido a um formato inválido. Essa exceção não necessita de tratamento obrigatório.
+
+Essas exceções garantem a robustez do código, permitindo que desenvolvedores capturem e tratem condições inesperadas de maneira apropriada.
