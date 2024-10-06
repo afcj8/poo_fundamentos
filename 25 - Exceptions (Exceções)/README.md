@@ -19,3 +19,11 @@ O tratamento de exceções no Java ocorre em três passos principais:
 3. **Tratamento:** Após a captura, a exceção é tratada de forma adequada para manter a continuidade do programa.
 
 Se uma exceção não for capturada, o programa é encerrado.
+
+## 25.2. Classificação das Exceções
+
+No Java, as exceções são representadas como objetos da classe `Exception`. Essas exceções podem ser divididas em três categorias principais:
+
+- **Checked:** Exceções que devem ser obrigatoriamente tratadas ou relançadas pelo desenvolvedor. Elas herdam da classe `Exception`.
+- **Unchecked:** Exceções opcionais de serem tratadas. Geralmente são causadas por erros no código. Se não forem tratadas, são automaticamente relançadas. Essas exceções herdam de `RuntimeException`.
+- **Error:** Erros críticos que indicam problemas graves, sendo geralmente irreparáveis em tempo de execução. Esses erros são lançados pela JVM e indicam que o programa não pode continuar.
