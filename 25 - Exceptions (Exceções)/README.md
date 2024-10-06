@@ -42,3 +42,4 @@ Além das exceções fornecidas pela plataforma Java, é possível criar exceç�
 
 - **ArithmeticException:** Uma exceção unchecked que ocorre quando há uma operação aritmética inválida, como uma divisão por zero. Esse tipo de erro é detectado em tempo de execução e não precisa ser obrigatoriamente tratado.
 - **ArrayIndexOutOfBoundsException:** Também unchecked, essa exceção acontece ao tentar acessar uma posição inexistente em um array. A posição inválida pode ser negativa ou superior ao tamanho do array (o índice máximo é sempre o tamanho do array menos um). Como é unchecked, o tratamento dessa exceção é opcional.
+- **NullPointerException:** Uma das exceções mais comuns e também unchecked, ocorre ao tentar acessar um método ou atributo de um objeto que não foi instanciado. Por exemplo, ao chamar `size()` em um objeto `ArrayList` que é `null`.
