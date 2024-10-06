@@ -37,3 +37,7 @@ A tabela abaixo ilustra exemplos dessas classificações:
 | RuntimeException | Exceção que pode ser tratada, porém não é obrigatória. | `NullPointerException`: ocorre ao tentar acessar métodos ou atributos de um objeto não instanciado. |
 
 Por meio do tratamento de exceções, é possível manter a estabilidade do programa e gerenciar erros de forma segura e controlada.
+
+Além das exceções fornecidas pela plataforma Java, é possível criar exceções personalizadas. Estas podem ser checked (filhas de `Exception`) ou unchecked (filhas de `RuntimeException`). A seguir, são descritas algumas das exceções mais comuns na plataforma Java:
+
+- **ArithmeticException:** Uma exceção unchecked que ocorre quando há uma operação aritmética inválida, como uma divisão por zero. Esse tipo de erro é detectado em tempo de execução e não precisa ser obrigatoriamente tratado.
