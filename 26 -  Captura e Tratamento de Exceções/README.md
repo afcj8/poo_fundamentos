@@ -50,3 +50,30 @@ public class Divisao {
     }
 }
 ```
+
+Esse código é simples, mas pode lançar uma exceção se o segundo número informado for zero. Nesse caso, ocorrerá uma `ArithmeticException`, já que a divisão por zero é uma operação inválida. Como essa é uma exceção unchecked, seu tratamento não é obrigatório. Abaixo, é apresentada uma versão modificada que inclui o tratamento de exceções:
+
+```
+import java.util.Scanner;
+
+public class DivisaoTryCatch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro número: ");
+        int n1 = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int n2 = sc.nextInt();
+        try {
+            int divisao = n1 / n2;
+            System.out.println("O resultado é: " + divisao);
+        } catch (ArithmeticException e) {
+            System.err.println("Erro ao dividir");
+        }
+        sc.close();
+    }
+}
+```
+
+Nesse exemplo, um bloco `try-catch` foi adicionado para capturar a `ArithmeticException` caso o divisor seja zero. Assim, ao invés de o programa ser interrompido, o fluxo de execução é redirecionado para o bloco `catch`, onde uma mensagem de erro é exibida. Se o divisor for zero, o resultado será "Erro ao dividir", e o bloco que imprime o resultado da divisão não será executado. Se o programa for executado sem que ocorra uma exceção, o resultado é exibido e o bloco `catch` é ignorado.
+
+O bloco `catch` recupera a exceção gerada por meio do parâmetro, que, no exemplo acima, é identificado como `e`. Isso permite acessar detalhes específicos sobre a exceção e tratá-la de forma adequada.
