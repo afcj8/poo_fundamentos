@@ -9,3 +9,13 @@ Durante a execução de um programa, é possível que exceções ou erros aconte
 - Falha na aquisição de recursos: por exemplo, ao tentar abrir um arquivo, conectar-se a um banco de dados ou acessar um web service.
 - Tentativa de realizar operações impossíveis: como a divisão de um número por zero ou o acesso a uma posição inexistente em um array.
 - Condições inválidas: por exemplo, invocar um método de um objeto não instanciado ou realizar um cast inadequado.
+
+Essas situações inesperadas, se não tratadas, interrompem o fluxo do programa. No entanto, o tratamento de exceções permite gerenciar esses erros sem prejudicar a continuidade do código. Por exemplo, em um programa que realiza uma divisão, caso o usuário forneça zero como divisor, o programa lançará uma exceção. Nesse caso, é possível tratar a exceção e solicitar ao usuário um novo valor, evitando que o programa seja interrompido.
+
+O tratamento de exceções no Java ocorre em três passos principais:
+
+1. **Lançamento:** Ocorre quando uma condição de erro inesperada é detectada.
+2. **Captura:** Em algum ponto do código, a exceção é interceptada.
+3. **Tratamento:** Após a captura, a exceção é tratada de forma adequada para manter a continuidade do programa.
+
+Se uma exceção não for capturada, o programa é encerrado.
