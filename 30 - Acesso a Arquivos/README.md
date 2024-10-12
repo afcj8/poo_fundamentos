@@ -103,3 +103,45 @@ public class LerArquivo {
     }
 }
 ```
+
+No exemplo, o arquivo é aberto usando a classe `FileReader`, similar ao exemplo de escrita de arquivos, mas com `FileReader` em vez de `FileWriter`. O nome do arquivo deve ser especificado como parâmetro. Se o arquivo estiver em outro diretório, o caminho completo deve ser informado:
+
+```
+FileReader stream = new FileReader("C://arquivo.txt");
+```
+
+Se o arquivo não for encontrado, uma exceção `FileNotFoundException` será gerada. O `BufferedReader` é então instanciado para permitir a leitura do conteúdo:
+
+```
+BufferedReader reader = new BufferedReader(stream);
+```
+
+O método `readLine()` da classe `BufferedReader` lê uma linha do arquivo e retorna uma `String`. O loop é repetido até que o valor retornado seja `null`, indicando o final do arquivo:
+
+```
+String linha = reader.readLine();
+while (linha != null) {
+    System.out.println(linha);
+    linha = reader.readLine();
+}
+```
+
+Por fim, é essencial fechar ambos os objetos para liberar recursos:
+
+```
+reader.close();
+stream.close();
+```
+
+A plataforma Java oferece várias classes no pacote `java.io` para leitura e escrita de arquivos, adaptadas a diferentes tipos de dados. Algumas das principais classes são:
+
+**Para entrada ou saída baseada em bytes:**
+
+- FileInputStream: para ler dados de um arquivo.
+- FileOutputStream: para escrever dados em um arquivo.
+- RandomAccessFile: para leitura e escrita de bytes em arquivos.
+
+**Para entrada ou saída baseada em caracteres:**
+
+- FileReader: para leitura de caracteres de um arquivo.
+- FileWriter: para escrita de caracteres em um arquivo.
