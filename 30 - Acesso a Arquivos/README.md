@@ -39,3 +39,33 @@ public class EscreveArquivo {
     }
 }
 ```
+
+No exemplo acima, o método `main` abre, escreve e fecha um arquivo chamado “arquivo.txt”. Se o arquivo já existir, ele será aberto; caso contrário, será criado. Na instância de `FileWriter`, é necessário fornecer o caminho e o nome do arquivo. Como nenhum caminho específico foi fornecido, o arquivo será criado na pasta raiz do programa.
+
+É possível especificar um caminho completo, como no exemplo a seguir:
+
+```
+FileWriter stream = new FileWriter("C://arquivo.txt");
+```
+
+Após instanciar o objeto `FileWriter`, o `PrintWriter` é criado utilizando o objeto de `FileWriter`:
+
+```
+PrintWriter print = new PrintWriter(stream);
+```
+
+A partir do `PrintWriter`, podem-se usar os métodos `print` ou `println` para inserir dados no arquivo:
+
+```
+print.println("Teste");
+print.println("Escrevendo no arquivo");
+```
+
+Para concluir, é necessário chamar o método `close` tanto em `PrintWriter` quanto em `FileWriter`, para fechar o arquivo e liberar os recursos:
+
+```
+print.close();
+stream.close();
+```
+
+Como a abertura e manipulação de arquivos podem gerar exceções, a exceção `IOException` deve ser tratada para evitar erros durante a execução. O resultado do programa será um arquivo de texto com as informações gravadas conforme especificado.
