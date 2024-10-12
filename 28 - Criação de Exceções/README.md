@@ -1,0 +1,3 @@
+# 28. Criação de Exceções
+
+Também é possível criar classes de exceção personalizadas para representar erros específicos, evitando o uso de exceções genéricas. Para isso, basta criar uma classe que herde de `Exception` (exceção verificada) ou de `RuntimeException` (exceção não verificada). Assim, o código torna-se mais claro e compreensível, já que as exceções específicas descrevem melhor o tipo de erro.
