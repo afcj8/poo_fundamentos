@@ -13,3 +13,14 @@ public class ValorInvalidoException extends RuntimeException {
     }
 }
 ```
+
+Em seguida, o método `depositar` é modificado para lançar essa exceção personalizada:
+
+```
+public void depositar(double valor) {
+    if (valor < 0) {
+        throw new ValorInvalidoException("Valor de depósito inválido: " + valor);
+    }
+    saldo += valor;
+}
+```
