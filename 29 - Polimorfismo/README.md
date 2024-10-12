@@ -15,3 +15,17 @@ public class SaldoInsuficienteException extends Exception {
     }
 }
 ```
+
+Em seguida, cria-se a classe `Conta`, que representa uma conta bancária genérica com um atributo `saldo` e um método `sacar`. O método lança a exceção `SaldoInsuficienteException` caso o valor a ser sacado seja superior ao saldo disponível:
+
+```
+public class Conta {
+    protected double saldo;
+    public void sacar(double valor) throws SaldoInsuficienteException {
+        if (valor > saldo) {
+            throw new SaldoInsuficienteException("Saldo insuficiente");
+        }
+        saldo -= valor;
+    }
+}
+```
