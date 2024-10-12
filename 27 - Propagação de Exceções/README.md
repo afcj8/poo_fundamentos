@@ -34,3 +34,16 @@ public class Calculadora {
     }
 }
 ```
+
+Métodos podem lançar múltiplos tipos de exceções, bastando listá-las separadas por vírgulas na cláusula `throws`. Dessa forma, as exceções que o método pode gerar ficam explícitas, permitindo que o chamador implemente o tratamento adequado.
+
+Além disso, é possível lançar uma exceção diretamente dentro de um método usando o comando `throw`. O exemplo abaixo valida se o valor a ser depositado é maior que zero. Caso contrário, lança uma `IllegalArgumentException`:
+
+```
+public void depositar(double valor) {
+    if (valor < 0) {
+        throw new IllegalArgumentException("Valor de depósito inválido");
+    }
+    saldo += valor;
+}
+```
