@@ -44,3 +44,20 @@ public class ContaCorrente extends Conta {
     }
 }
 ```
+
+Por fim, a classe `Teste` contém o método `main`, que cria uma variável de referência do tipo `Conta` e armazena nela um objeto `ContaCorrente`. Em seguida, invoca o método `sacar` e trata a exceção caso o saldo seja insuficiente.
+
+```
+public class Teste {
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+        try {
+            cc.sacar(20);
+        } catch (SaldoInsuficienteException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+Embora a variável `cc` seja do tipo `Conta`, o objeto atribuído a ela é do tipo `ContaCorrente`. Ao invocar `cc.sacar(20)`, o método que será executado é o definido na `ContaCorrente`, e não o da `Conta`. Isso ocorre porque a execução sempre é determinada pelo tipo real do objeto (polimorfismo).
