@@ -24,3 +24,13 @@ public void depositar(double valor) {
     saldo += valor;
 }
 ```
+
+Agora, cria-se uma exceção verificada (checked), chamada `SaldoInsuficienteException`, que estende `Exception`:
+
+```
+public class SaldoInsuficienteException extends Exception {
+    public SaldoInsuficienteException(String mensagem) {
+        super(mensagem);
+    }
+}
+```
