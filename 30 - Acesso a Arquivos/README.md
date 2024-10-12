@@ -16,3 +16,26 @@ Arquivos de texto, por sua simplicidade, são facilmente manipuláveis em Java e
 - Fechar o arquivo.
 
 As classes para manipulação de arquivos estão no pacote `java.io`. Para escrita em arquivos de texto, as classes `FileWriter` e `PrintWriter` são amplamente utilizadas.
+
+A classe `FileWriter` herda de `OutputStreamWriter` e pode ser utilizada para abrir arquivos em modo de escrita. Para escrever no arquivo, utiliza-se a classe `PrintWriter`, que recebe como argumento um objeto `FileWriter`.
+
+```
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class EscreveArquivo {
+    public static void main(String[] args) {
+        try {
+            FileWriter stream = new FileWriter("arquivo.txt");
+            PrintWriter print = new PrintWriter(stream);
+            print.println("Teste");
+            print.println("Escrevendo no arquivo");
+            print.close();
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
