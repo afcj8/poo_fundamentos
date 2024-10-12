@@ -69,3 +69,37 @@ stream.close();
 ```
 
 Como a abertura e manipulação de arquivos podem gerar exceções, a exceção `IOException` deve ser tratada para evitar erros durante a execução. O resultado do programa será um arquivo de texto com as informações gravadas conforme especificado.
+
+Para ler um arquivo em Java, é necessário realizar três etapas principais:
+
+- Abrir o arquivo.
+- Ler os dados.
+- Fechar o arquivo.
+
+As classes mais comumente usadas para leitura de dados de um arquivo são `java.io.FileReader` e `java.io.BufferedReader`. A classe `FileReader` é uma subclasse de `InputStreamReader`, projetada para ler fluxos de entrada baseados em caracteres.
+
+O exemplo a seguir ilustra a abertura e leitura do arquivo "arquivo.txt", exibindo cada linha no console:
+
+```
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LerArquivo {
+    public static void main(String[] args) {
+        try {
+            FileReader stream = new FileReader("arquivo.txt");
+            BufferedReader reader = new BufferedReader(stream);
+            String linha = reader.readLine();
+            while (linha != null) {
+                System.out.println(linha);
+                linha = reader.readLine();
+            }
+            reader.close();
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
