@@ -34,3 +34,16 @@ public class SaldoInsuficienteException extends Exception {
     }
 }
 ```
+
+Para utilizar essa exceção, é necessário declará-la na assinatura do método com `throws`:
+
+```
+public void sacar(double valor) throws SaldoInsuficienteException {
+    if (valor > saldo) {
+        throw new SaldoInsuficienteException("Saldo insuficiente para saque: " + valor);
+    }
+    saldo -= valor;
+}
+```
+
+Nos exemplos acima, foram criadas exceções verificada e não verificada para ilustrar a personalização de exceções em Java. Dependendo da necessidade, pode-se optar por criar apenas um tipo de exceção para uma classe. É recomendável que exceções personalizadas incluam mensagens descritivas, facilitando a compreensão do motivo do erro e promovendo um tratamento adequado.
