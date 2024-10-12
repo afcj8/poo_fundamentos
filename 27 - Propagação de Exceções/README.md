@@ -24,3 +24,13 @@ public class Calculadora {
     }
 }
 ```
+
+A alternativa mais eficaz é propagar a exceção para o chamador, permitindo que ele trate o erro. Para isso, utiliza-se a cláusula `throws` na assinatura do método:
+
+```
+public class Calculadora {
+    public int divisao(int n1, int n2) throws ArithmeticException {
+        return n1 / n2;
+    }
+}
+```
