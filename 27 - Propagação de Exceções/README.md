@@ -47,3 +47,16 @@ public void depositar(double valor) {
     saldo += valor;
 }
 ```
+
+Neste caso, a exceção é `unchecked`, portanto, não é necessário incluir `throws` na assinatura do método. Já para exceções `checked`, é obrigatório declarar `throws`. Por exemplo:
+
+```
+public void sacar(double valor) throws Exception {
+    if (valor > saldo) {
+        throw new Exception("Saldo insuficiente");
+    }
+    saldo -= valor;
+}
+```
+
+Esse método verifica se o saldo é suficiente para o saque. Caso não seja, lança uma exceção, obrigando o chamador a tratar a exceção ou propagá-la. Dessa forma, o código fica mais robusto e resiliente a erros.
