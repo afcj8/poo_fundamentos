@@ -10,4 +10,17 @@ public class Calculadora {
 }
 ```
 
-Caso o valor de `n2` seja zero, o método lançará uma exceção.
+Caso o valor de `n2` seja zero, o método lançará uma exceção. Embora seja possível tratar a exceção com `try-catch`, isso pode ocultar o erro do método chamador:
+
+```
+public class Calculadora {
+    public int divisao(int n1, int n2) {
+        try {
+            return n1 / n2;
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+}
+```
