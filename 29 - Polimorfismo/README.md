@@ -29,3 +29,18 @@ public class Conta {
     }
 }
 ```
+
+Posteriormente, é desenvolvida a classe `ContaCorrente`, que herda de `Conta`. Essa subclasse possui um atributo adicional `limite`, e sobrescreve o método `sacar` para incluir o limite na verificação. Se o valor solicitado for superior ao saldo mais o limite, a exceção personalizada será lançada:
+
+```
+public class ContaCorrente extends Conta {
+    private double limite;
+    @Override
+    public void sacar(double valor) throws SaldoInsuficienteException {
+        if (valor > saldo + limite) {
+            throw new SaldoInsuficienteException("Saldo insuficiente");
+        }
+        saldo -= valor;
+    }
+}
+```
