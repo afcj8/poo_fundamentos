@@ -3,3 +3,15 @@
 A palavra polimorfismo, segundo o dicionário Houaiss, refere-se à “qualidade ou estado de ser capaz de assumir diferentes formas”. Na programação orientada a objetos, esse conceito indica a capacidade de um método de apresentar múltiplos comportamentos, de acordo com o objeto ao qual se aplica.
 
 Por meio do polimorfismo, um método pode executar ações diferentes dependendo da classe do objeto. Isso permite que uma variável de referência e o objeto real assumam tipos distintos, desde que a classe do objeto herde a classe da variável de referência. Assim, é possível criar um código flexível, que não requer alterações quando novos tipos de subclasses são adicionados. A principal aplicação do polimorfismo ocorre quando a superclasse e a subclasse implementam o mesmo método, porém com comportamentos distintos, processo conhecido como sobrescrita de métodos.
+
+A seguir, é apresentada uma implementação do polimorfismo utilizando duas classes principais: `Conta` e `ContaCorrente`. Além dessas, é criada uma exceção personalizada chamada `SaldoInsuficienteException` para tratar erros relacionados a saldo insuficiente.
+
+Primeiramente, define-se a exceção `SaldoInsuficienteException`. Essa classe estende Exception e inclui um construtor que aceita uma mensagem de erro específica, permitindo uma comunicação mais detalhada sobre a falha:
+
+```
+public class SaldoInsuficienteException extends Exception {
+    public SaldoInsuficienteException(String mensagem) {
+        super(mensagem);
+    }
+}
+```
