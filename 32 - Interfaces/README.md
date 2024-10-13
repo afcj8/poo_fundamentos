@@ -91,3 +91,31 @@ public interface Gerenciavel extends Autenticavel, Serializable {
 ```
 
 Ao permitir a extensão de múltiplas interfaces, o Java facilita a combinação de diferentes comportamentos em uma única interface, sem a necessidade de herança múltipla de classes.
+
+Interfaces também podem conter métodos concretos. Um método concreto em uma interface é definido usando o modificador `default`. Esses métodos, conhecidos como default methods, são herdados por todas as classes que implementarem a interface, dispensando a necessidade de implementá-los diretamente:
+
+```
+public interface Corredor {
+    default void parar() {
+        System.out.println("Parando..");
+    }
+}
+```
+
+No exemplo acima, qualquer classe que implemente a interface `Corredor` herdará o método `parar`, sem necessidade de implementação. Por exemplo:
+
+```
+public class Avestruz implements Corredor {
+}
+```
+
+A classe `Avestruz` herda o método `parar()` automaticamente, podendo utilizá-lo ou sobrescrevê-lo se necessário:
+
+```
+public class Avestruz implements Corredor {
+    @Override
+    public void parar() {
+        System.out.println("Avestruz parando...");
+    }
+}
+```
