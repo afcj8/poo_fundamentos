@@ -151,3 +151,28 @@ public class FormatandoSaidaDatas {
     }
 }
 ```
+
+## 35.4. Conversão de Datas com SimpleDateFormat
+
+Para conversões mais personalizadas, utiliza-se a classe `SimpleDateFormat`, que permite especificar o padrão de formatação no construtor. O método `parse` permite converter `String` para `Date`, e `format` converte `Date` para `String`.
+
+```
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Date;
+
+public class ConversaoDatas {
+    public static void main(String[] args) throws ParseException {
+        Calendar c = Calendar.getInstance();
+        Date data = c.getTime();
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        System.out.println("Data formatada: " + sdf.format(data));
+        
+        // Conversão de String para Date
+        Date data2 = sdf.parse("12/01/1995");
+        System.out.println("Data convertida: " + data2);
+    }
+}
+```
