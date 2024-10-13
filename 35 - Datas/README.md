@@ -18,3 +18,20 @@ public class TestaDate {
     }
 }
 ```
+
+## 35.2. Classe Calendar
+
+A classe `Calendar` permite a manipulação e formatação de datas e horas para diferentes culturas e estilos de calendário. Como é uma classe abstrata, não pode ser instanciada diretamente; para obter uma instância, utiliza-se o método estático `getInstance()`.
+
+Exemplo de uso da classe `Calendar`:
+
+```
+import java.util.Calendar;
+
+public class DataCalendar {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        System.out.println("Data e Hora Atual: " + c.getTime());
+    }
+}
+```
