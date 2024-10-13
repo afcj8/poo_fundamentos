@@ -152,6 +152,30 @@ public class FormatandoSaidaDatas {
 }
 ```
 
+1. `FULL`:
+
+- **Descrição:** Exibe a data de forma completa, com o máximo de detalhes, incluindo o dia da semana, mês por extenso, dia do mês, ano e, se necessário, a hora com fuso horário.
+- **Exemplo (Brasil):** terça-feira, 1 de janeiro de 2024.
+- **Usos:** Indicada para contextos formais, onde se deseja apresentar a data por extenso, como documentos oficiais.
+
+2. `LONG`:
+
+- **Descrição:** Exibe a data de forma detalhada, mas com menos informações do que o formato `FULL`. Inclui o mês por extenso, o dia e o ano, mas geralmente omite o dia da semana e o fuso horário.
+- **Exemplo (Brasil):** 1 de janeiro de 2024.
+- **Usos:** Comum em contextos que precisam de uma representação mais legível que o `MEDIUM` ou `SHORT`, mas sem os detalhes do `FULL`.
+
+3. `MEDIUM`:
+
+- **Descrição:** Exibe a data de maneira resumida, com o mês em forma abreviada e sem o dia da semana. Geralmente, mostra o mês com três letras e o ano em quatro dígitos.
+- **Exemplo (Brasil):** 1 de jan. de 2024.
+- **Usos:** Usado em relatórios e interfaces de usuário, onde é necessária uma data abreviada, mas ainda legível.
+
+4. `SHORT`:
+
+- **Descrição:** Exibe a data de maneira extremamente abreviada, usando apenas números para o dia, mês e ano.
+- **Exemplo (Brasil):** 01/01/2024.
+- **Usos:** Comum em sistemas onde o espaço é limitado, como tabelas e bancos de dados, ou quando a data precisa ser rapidamente reconhecível e interpretada.
+
 ## 35.4. Conversão de Datas com SimpleDateFormat
 
 Para conversões mais personalizadas, utiliza-se a classe `SimpleDateFormat`, que permite especificar o padrão de formatação no construtor. O método `parse` permite converter `String` para `Date`, e `format` converte `Date` para `String`.
