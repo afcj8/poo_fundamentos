@@ -9,7 +9,11 @@ Em Java, a leitura e gravação de arquivos são facilitadas pela independência
 - Output stream: grava dados em um destino.
 - Input stream: lê dados de uma fonte.
 
-Arquivos de texto, por sua simplicidade, são facilmente manipuláveis em Java e entendidos por diferentes programas. Neles, registros geralmente correspondem a linhas, e campos a colunas ou valores separados por vírgulas. Para gravar dados em um arquivo de texto, três passos básicos são seguidos:
+Arquivos de texto, por sua simplicidade, são facilmente manipuláveis em Java e entendidos por diferentes programas. Neles, registros geralmente correspondem a linhas, e campos a colunas ou valores separados por vírgulas. 
+
+## 30.1. Escrita de Arquivos
+
+Para gravar dados em um arquivo de texto, três passos básicos são seguidos:
 
 - Abrir o arquivo.
 - Gravar os dados.
@@ -69,6 +73,8 @@ stream.close();
 ```
 
 Como a abertura e manipulação de arquivos podem gerar exceções, a exceção `IOException` deve ser tratada para evitar erros durante a execução. O resultado do programa será um arquivo de texto com as informações gravadas conforme especificado.
+
+## 30.2. Leitura de Arquivos
 
 Para ler um arquivo em Java, é necessário realizar três etapas principais:
 
