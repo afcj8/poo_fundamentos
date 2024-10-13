@@ -1,4 +1,4 @@
-# 32. Interfaces
+# 33. Interfaces
 
 Na programação orientada a objetos, o conceito de interface é utilizado para definir um conjunto de requisitos que as classes devem implementar. A interface não é uma classe e, portanto, não pode ser instanciada. Ela funciona como um contrato que estabelece quais métodos uma classe deve implementar para garantir um comportamento específico.
 
@@ -92,6 +92,8 @@ public interface Gerenciavel extends Autenticavel, Serializable {
 
 Ao permitir a extensão de múltiplas interfaces, o Java facilita a combinação de diferentes comportamentos em uma única interface, sem a necessidade de herança múltipla de classes.
 
+## 33.1. Métodos Concretos em Interfaces
+
 Interfaces também podem conter métodos concretos. Um método concreto em uma interface é definido usando o modificador `default`. Esses métodos, conhecidos como default methods, são herdados por todas as classes que implementarem a interface, dispensando a necessidade de implementá-los diretamente:
 
 ```
@@ -119,3 +121,49 @@ public class Avestruz implements Corredor {
     }
 }
 ```
+
+## 33.2. Métodos Estáticos em Interfaces
+
+Além dos métodos `default`, uma interface pode definir métodos `static`. Métodos `static` pertencem à interface e não podem ser sobrescritos por classes que a implementam. Para chamá-los, é necessário referenciar diretamente a interface, e não a classe implementadora ou uma instância:
+
+```
+public interface Corredor {
+    default void parar() {
+        System.out.println("Parando..");
+    }
+    
+    static void acelerar() {
+        System.out.println("Acelerando");
+    }
+}
+```
+
+Neste caso, o método `acelerar()` é estático e só pode ser acessado diretamente pela interface `Corredor`:
+
+```
+public static void main(String[] args) {
+    Corredor corredor = new Avestruz();
+    corredor.parar();        // Executa o método `parar`
+    Corredor.acelerar();      // Executa o método `acelerar` da interface
+}
+```
+
+## 33.3. Interface com Métodos Abstratos, Defaults e Estáticos
+
+É possível combinar métodos abstratos, `default` e `static` em uma mesma interface. Métodos abstratos não possuem implementação e devem ser implementados pelas classes concretas que adotarem a interface:
+
+```
+public interface Corredor {
+    void correr(int velocidade); // Método abstrato
+    default void parar() {
+        System.out.println("Parando..");
+    }
+    static void acelerar() {
+        System.out.println("Acelerando");
+    }
+}
+```
+
+Nesse exemplo, qualquer classe que implemente `Corredor` precisará implementar o método `correr`. Já os métodos `parar` e `acelerar` têm implementações padrão fornecidas pela interface, sendo que o primeiro pode ser sobrescrito enquanto o segundo é estático e, portanto, imutável.
+
+Assim, o uso de `default` e `static` em interfaces permite a criação de métodos reutilizáveis e flexíveis, além de simplificar a estrutura de código ao evitar a duplicação de lógica entre classes.
