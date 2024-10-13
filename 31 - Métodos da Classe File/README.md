@@ -13,4 +13,34 @@ A classe `File` da API de IO do Java é usada para representar arquivos e diret�
 | renameTo    | Renomeia um arquivo ou diretório.               |
 | length      | Retorna o tamanho do arquivo.                   |
 | delete      | Exclui um arquivo ou diretório.                 |
-| getPath     | Retorna o caminho do arquivo ou diretório.      | 
+| getPath     | Retorna o caminho do arquivo ou diretório.      |
+
+O exemplo a seguir mostra como criar um objeto `File`, verificar se o arquivo existe e recuperar informações sobre ele. Se o arquivo não existir, ele será criado.
+
+```
+import java.io.File;
+import java.io.IOException;
+
+public class ManipulaArquivo {
+    public static void main(String[] args) {
+        File arquivo = new File("arquivo.txt");
+
+        if (arquivo.exists()) {
+            System.out.println("O arquivo existe!" +
+                "\nPode ser lido: " + arquivo.canRead() +
+                "\nPode ser gravado: " + arquivo.canWrite() +
+                "\nTamanho: " + arquivo.length() +
+                "\nCaminho: " + arquivo.getPath());
+        } else {
+            try {
+                if (arquivo.createNewFile())
+                    System.out.println("Arquivo criado!");
+                else
+                    System.out.println("Arquivo não criado!");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
