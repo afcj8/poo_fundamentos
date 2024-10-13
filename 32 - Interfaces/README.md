@@ -59,3 +59,35 @@ public class Usuario implements Autenticavel {
     }
 }
 ```
+
+Aqui, a classe `Usuario` implementa a interface `Autenticavel`, o que significa que deve fornecer uma implementação para todos os métodos da interface. Caso contrário, um erro de compilação será gerado.
+
+Se uma classe precisar implementar várias interfaces, é possível fazê-lo separando-as por vírgula:
+
+```
+public class Usuario implements Autenticavel, Serializable {
+    // Implementação dos métodos de ambas as interfaces
+}
+```
+
+Quando uma classe implementa interfaces e herda de uma classe, a herança deve ser definida primeiro, seguida das interfaces:
+
+```
+public class Usuario extends Pessoa implements Autenticavel {
+    // Implementação dos métodos de Autenticavel e funcionalidades da classe Pessoa
+}
+```
+
+Com isso, a classe `Usuario` herda de `Pessoa` e implementa `Autenticavel`, respeitando tanto a herança quanto os contratos estabelecidos pelas interfaces. Esse uso de interfaces permite maior flexibilidade no design, facilitando a implementação de comportamentos variados sem a necessidade de herança múltipla direta.
+
+Em Java, uma interface pode estender outras interfaces, possibilitando a criação de hierarquias de interfaces. Isso é feito utilizando a palavra-chave `extends`:
+
+```
+public interface Gerenciavel extends Autenticavel {
+}
+
+public interface Gerenciavel extends Autenticavel, Serializable {
+}
+```
+
+Ao permitir a extensão de múltiplas interfaces, o Java facilita a combinação de diferentes comportamentos em uma única interface, sem a necessidade de herança múltipla de classes.
