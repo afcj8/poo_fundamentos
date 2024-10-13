@@ -1,0 +1,3 @@
+# 34. Enums
+
+A palavra enum é uma abreviação de “enumeração”, e é usada em programação para se referir a um tipo de dado que permite definir um conjunto fixo de valores nomeados. Em Java, um enum é uma classe especial que contém um conjunto fixo de constantes nomeadas. Os enums são úteis para representar um conjunto de valores fixos e bem definidos em um programa, como os dias da semana, os meses do ano ou os códigos de erro.
