@@ -91,3 +91,36 @@ public class MsgBoasVindasCalendar {
 ```
 
 Esses exemplos demonstram as principais funcionalidades da classe `Calendar` para manipulação e exibição de datas e horários, oferecendo maior flexibilidade e suporte para operações internacionais.
+
+## 35.3. Classe DateFormat
+
+A classe `DateFormat` permite converter objetos `String` para `Date` e vice-versa, aplicando formatos específicos. Como é uma classe abstrata, utiliza-se o método estático `getDateInstance()` para instanciá-la. Para usar a classe, é necessário importar o pacote `java.text`.
+
+O código abaixo demonstra como formatar uma data usando diferentes métodos de `DateFormat`:
+
+```
+import java.util.Calendar;
+import java.text.DateFormat;
+import java.util.Date;
+
+public class FormatandoDatas {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        c.set(2013, Calendar.FEBRUARY, 28);
+        Date data = c.getTime();
+        System.out.println("Data atual sem formatação: " + data);
+
+        // Formata a data
+        DateFormat formataData = DateFormat.getDateInstance();
+        System.out.println("Data atual com formatação: " + formataData.format(data));
+
+        // Formata a hora
+        DateFormat hora = DateFormat.getTimeInstance();
+        System.out.println("Hora formatada: " + hora.format(data));
+
+        // Formata data e hora
+        DateFormat dtHora = DateFormat.getDateTimeInstance();
+        System.out.println(dtHora.format(data));
+    }
+}
+```
