@@ -176,3 +176,36 @@ public class ConversaoDatas {
     }
 }
 ```
+
+## 35.5. Internacionalização com Locale
+
+O Java permite adaptar a formatação de datas a diferentes locais através da classe `Locale`. O exemplo a seguir demonstra como formatar uma data para o Brasil, EUA e Itália:
+
+```
+import java.util.Calendar;
+import java.util.Locale;
+import java.text.DateFormat;
+import java.util.Date;
+
+public class LocaleDatas {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        Date data = c.getTime();
+
+        Locale brasil = new Locale("pt", "BR");
+        Locale eua = Locale.US;
+        Locale italia = Locale.ITALY;
+
+        DateFormat f1 = DateFormat.getDateInstance(DateFormat.FULL, brasil);
+        System.out.println("Data brasileira: " + f1.format(data));
+
+        DateFormat f2 = DateFormat.getDateInstance(DateFormat.FULL, eua);
+        System.out.println("Data americana: " + f2.format(data));
+
+        DateFormat f3 = DateFormat.getDateInstance(DateFormat.FULL, italia);
+        System.out.println("Data italiana: " + f3.format(data));
+    }
+}
+```
+
+Esses exemplos mostram como manipular e formatar datas no Java, permitindo diversas configurações e suporte à internacionalização.
