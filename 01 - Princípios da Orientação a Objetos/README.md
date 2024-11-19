@@ -24,7 +24,7 @@ No contexto da programação, a herança é o mecanismo pelo qual uma classe (su
 
 A herança é um dos mecanismos fundamentais nas linguagens que suportam o paradigma da orientação a objetos. Esse recurso permite a criação de novas classes a partir de classes já existentes, facilitando a reutilização de atributos e métodos. Dessa forma, é possível derivar uma nova classe mais especializada a partir de uma classe genérica.
 
-A aplicação da herança envolve basicamente dois elementos: a superclasse (classe pai) e a subclasse (classe filha). A figura 1.1 a seguir ilustra essa relação de herança.
+A aplicação da herança envolve basicamente dois elementos: a superclasse (classe pai) e a subclasse (classe filha). A Figura 1.1 a seguir ilustra essa relação de herança.
 
 <div align="center">
     <img src="../imgs/heranca.png" width="50%"/>
